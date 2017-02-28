@@ -1,0 +1,91 @@
+@charset "utf-8";
+@media screen and (min-width: 320px){css.css}
+@media screen and (min-width: 375px){css-6.css}
+body { margin:0px auto;font-family:"微软雅黑";font-size:14px;padding:0px; background:#f1f1f1; color:#353535}
+ul,li,h1,h2,h3,h4,h5,h6,h7,p,i,tbody,tr,td{margin:0px;padding:0px;list-style-type: none;}
+a{text-decoration:none;}
+img{ border:0;}
+/*去掉苹果设备input_CSS样式*/
+input[type="button"], input[type="submit"], input[type="reset"], input[type="date"] {-webkit-appearance: none;}
+select{-webkit-appearance: none }
+textarea {  -webkit-appearance: none;}  
+.button{ border-radius: 0; } 
+
+/*身份验证*/
+body.identity{ background:url(../img/sf1.jpg) no-repeat center center; padding-top:6%; overflow:hidden;}
+.identity input{ width:86%; display:block; margin: 0 auto; border:1px solid #b8b8b8; height:50px; line-height:50px; border-radius:5px; font-family:"微软雅黑"; color:#4d4d4d; font-size:18px; padding:0 2% 0 10%}
+.identity input.identity_name{ background:url(../img/sf3.png) no-repeat 3.4% center; background-size:6%;}
+.identity input.identity_tel{ background:url(../img/sf4.png) no-repeat 3.4% center; background-size:6%; margin-top:4.5%}
+.identity input.identity_submit{ margin-top:6.5%; background:#ff4a00; border:1px solid #ff4a00; color:#fff; padding-left:0;}
+.identity p{ width:80%; margin:0 auto; font-size:13px; color:#ff4a00;  background-size:3%; padding-left:5%; margin-top:6.5%; text-align:center;}
+.errorTip{text-align:center;color:red;font-size:1.2em;display:none;text-align:center;font-size:16px;margin-top:20px;}
+/*头部信息*/
+header{ height:76px; background:url(../img/t1.jpg) no-repeat center center; background-size:100%; border-bottom:1px solid #a8a8a8; margin-bottom:18px;}
+header i{ float:left; border:2px solid #e9e2db; border-radius:50%; display:block; width:53px; height:53px; overflow:hidden; background:#e9e2db; margin: 10px 17px 0 10px}
+header i img{ width:100%;}
+header h1{ font-weight:normal; font-size:16px; padding-top:20px; color:#3e3e3e;}
+header h1 span{ display:block; font-size:12px; padding-top:4px;}
+
+/*今天工作*/
+.j_work{ margin-bottom:35px;}
+.j_work h2{ font-size:14px; width:90%; margin:0 auto; background:url(../img/j1.png) no-repeat left center; background-size:5px 100%; padding-left:3%;}
+.j_address{ border:1px solid #7b7b7b; margin:9px 0; background:#fff;}
+.j_address p{ width:94%; margin:0 auto;padding:10px 0; line-height:20px;}
+.j_address a{ display:block; text-align:center; height:28px; line-height:28px; background:#ff6323; color:#fff;}
+.j_work ul{ width:94%; margin:0 auto;}
+.j_work li{ border:1px solid #7b7b7b; background:#fff; overflow:hidden; margin-bottom:10px;}
+.j_work li h3{ border-bottom:1px solid #7b7b7b; font-weight:normal; line-height:34px; background:url(../img/j2.png) no-repeat 2.5% 47%; background-size:4.5%; padding-left:8%;}
+.j_work li td{ height:80px; padding:10px; border-bottom:1px solid #7b7b7b; width:100%; display:block;}
+.j_work li a{ display:block; float:left; height:39px; line-height:39px; text-align:center; width:50%; color:#353535;}
+.j_work li a.j_workxq{ border-right:1px solid #7b7b7b; width:49.6%;}
+.j_work li a#shooting{ background:url(../img/j3.png) no-repeat 18% center; background-size:20px;}
+.j_work li #ok_shooting{ background:url(../img/j4.png) no-repeat 18% center; background-size:20px;}
+.j_see{ width:94%; margin:0 auto 10px; overflow:hidden;}
+.j_see a{ border:1px solid #7b7b7b; display:block; float:left; height:40px; line-height:40px; color:#353535;}
+.j_see a.j_see1{ margin-right:8px; background:url(../img/j5.png) no-repeat 22% center #fff; background-size:22px; padding-left:18%; width:30%; }
+.j_see a.j_see2{ background:url(../img/j6.png) no-repeat 11% center #fff; background-size:22px; width:35%; padding-left:13%;}
+.j_tel{ width:94%; margin:0 auto 20px; overflow:hidden; background:#fff;}
+.j_tel a{ display:block; border:1px solid #7b7b7b; height:48px; line-height:48px; color:#353535; background:url(../img/j7.png) no-repeat 26% center; background-size:20px; padding-left:35%;}
+
+/*明天任务*/
+.m_task ul{ background:#fff; width:100%; padding:8px 0 0; border-top:1px solid #7b7b7b; border-bottom:1px solid #7b7b7b;}
+.m_task ul li{ width:100%; border:none; width:94%; margin:0 auto; padding-bottom:8px;}
+.m_task h3{ font-weight:normal; width:94%; margin:2px auto 5px; color:#797979;}
+.m_task ul a{ display:block; height:26px; line-height:26px; text-align:center; border-top:1px solid #797979; color:#353535}
+
+/*任务列表*/
+.d_task li{ width:100%; background:#fff; margin-bottom:10px;}
+.d_task h2{ font-size:14px; width:90%; margin:0 auto; background:url(../img/j1.png) no-repeat left center; background-size:5px 100%; padding-left:3%;}
+.d_task li h1{ font-weight:normal; height:36px; line-height:36px; border:1px solid #7b7b7b; border-left:none; border-right:none; font-size:16px; background:url(../img/r1.png) no-repeat 10px center; background-size:20px; padding-left:33px; color:#565656;}
+.d_task li h2{ font-size:16px; font-weight:normal; padding:10px 10px 0 ; color:#565656; border-bottom:1px solid #7b7b7b}
+.d_task li h2 span{ display:block; color:#8f8f8f; padding:8px 0 11px 18px; background:url(../img/r2.png) no-repeat left 10px; background-size:14px;}
+.d_task li p{ padding:5px 10px; color:#565656; border-bottom:1px solid #7b7b7b}
+.d_task li p span{ display:block; padding:5px 0;}
+.d_task li a{ text-align:center; display:block; color:#565656; line-height:34px; border-bottom:1px solid #7b7b7b}
+.task_load{ display:block; width:94%; margin:0 auto; text-align:center; background:#d6d6d6; line-height:33px; color:#636363; margin-bottom:15px;}
+
+/*拍照任务*/
+.p_task{ width:94%; margin:0 auto;}
+.p_task h1{ font-weight:normal; font-size:16px; margin-bottom:11px;}
+.p_task h1 b{ color:#ff0000; font-size:20px; font-family:Arial, Helvetica, sans-serif; padding:0 2px;}
+.p_task ul{ overflow:hidden;}
+.p_task li{ width:30.5%; margin:0 1% 1%; border:1px solid #fff; height:22.8%; background:url(../img/p1.png) no-repeat center center #dbdbdb; background-size:100%; float:left;}
+.p_task li img{ width:100%; height:100%;}
+.p_note{ margin:5px 0 8px; border:1px solid #7b7b7b; padding-bottom:5px;}
+.p_note h2{ height:31px; line-height:31px; color:#5c5c5c; font-weight:normal; font-size:14px; border-bottom:1px solid #7b7b7b; background:url(../img/p2.png) no-repeat 8px center; background-size:22px 19px; padding-left:38px; margin-bottom:5px;}
+.p_note p{ font-size:12px; line-height:18px; padding: 0 10px; color:#5c5c5c;}
+.p_submit{ width:100%; margin:0 0 10px; height:33px; border:none; background:#ff4a00; color:#fff; font-size:14px; font-family:"微软雅黑";}
+.p_submitno{ width:100%; margin-bottom:22px; display:block; height:33px; line-height:33px; text-align:center; background:#acacac;}
+.inputFile{visibility:hidden;width:0px;height:0px}
+
+/*任务详情*/
+.d_task{ width:94%; margin:0 auto;}
+.d_task h6{ font-size:14px; font-weight:normal; border:1px solid #7b7b7b; margin-bottom:8px; height:30px; line-height:30px; color:#464646; background:#fff;}
+.d_task h6 span{ color:#797979; border-right:1px solid #7b7b7b; height:30px; display:block; float:left; width:87px; text-align:center; margin-right:10px;}
+.d_task h3{ font-size:14px; font-weight:normal; color:#797979; padding:8px 0; background:url(../img/j1.png) no-repeat 10px center; background-size:5px 50%; padding-left:18px; border-bottom:1px solid #7b7b7b}
+.d_taskxq{ border:1px solid #797979; background:#fff; margin-bottom:9px;}
+.d_taskxq ul{ padding:5px 0;}
+.d_taskxq ul li{ margin-bottom:0; padding:0 3%; width:94%; line-height:22px;}
+.d_process{ border:1px solid #797979; background:#fff; margin-bottom:9px;}
+.d_process1{ padding:6px 10px 4px}
+.d_process p{ line-height:20px;}

@@ -1,0 +1,2427 @@
+@charset "utf-8";
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "微软雅黑";
+}
+body {
+    width: 100%;
+    height: 100%;
+    max-width: 1024px;
+    margin: 0px auto;
+    font-family: "微软雅黑";
+    padding: 0px;
+    background: #f2f2f4;
+    font-size: 12px;
+    position: relative;
+}
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 449px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 501px) and (max-width: 600px) {
+    html {
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 640px) {
+    html {
+        font-size: 16px;
+    }
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: 0;
+}
+ul,
+li {
+    list-style: none;
+}
+/*去掉苹果设备input_CSS样式*/
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="date"],
+input[type="password"] {
+    -webkit-appearance: none;
+    font-family: "微软雅黑";
+}
+::-webkit-inner-spin-button {
+    visibility: hidden;
+}
+::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+select {
+    -webkit-appearance: none;
+    font-family: "微软雅黑";
+}
+textarea {
+    -webkit-appearance: none;
+    font-family: "微软雅黑";
+}
+/*宽度*/
+.width100_ {
+    width: 100%;
+}
+.width84_ {
+    width: 84%;
+}
+.width16_ {
+    width: 16%;
+}
+/*高度*/
+.height100_ {
+    height: 100%;
+}
+/*对其*/
+.fL {
+    float: left;
+}
+.fR {
+    float: right;
+}
+.mA {
+    margin: 0 auto;
+}
+/*背景*/
+.backfff {
+    background: #fff;
+}
+.back333 {
+    background: #333;
+}
+.back666 {
+    background: #666;
+}
+.back575555 {
+    background: #575555;
+}
+.backf2f2f4 {
+    background: #f2f2f4;
+}
+.backf9f9f9 {
+    background: #f9f9f9;
+}
+.backed6c00 {
+    background: #ed6c00;
+}
+.back00a8ff {
+    background: #00a8ff;
+}
+.backe94e30 {
+    background: #e94e30;
+}
+.backf4a000 {
+    background: #f4a000;
+}
+.back85d757 {
+    background: #85d757;
+}
+/*边框*/
+.borderdddee3 {
+    border: 0.1rem solid #dddee3;
+}
+.borderLdddee3 {
+    border-left: 0.1rem solid #dddee3;
+}
+.borderRdddee3 {
+    border-right: 0.1rem solid #dddee3;
+}
+.borderTdddee3 {
+    border-top: 0.1rem solid #dddee3;
+}
+.borderBdddee3 {
+    border-bottom: 0.1rem solid #dddee3;
+}
+.borderd8d8d8 {
+    border: 0.1rem solid #d8d8d8;
+}
+.borderLd8d8d8 {
+    border-left: 0.1rem solid #d8d8d8;
+}
+.borderRd8d8d8 {
+    border-right: 0.1rem solid #d8d8d8;
+}
+.borderTd8d8d8 {
+    border-top: 0.1rem solid #d8d8d8;
+}
+.borderBd8d8d8 {
+    border-bottom: 0.1rem solid #d8d8d8;
+}
+.bordered6c00 {
+    border: 0.1rem solid #ed6c00;
+}
+.borderLed6c00 {
+    border-left: 0.1rem solid #ed6c00;
+}
+.borderRed6c00 {
+    border-right: 0.1rem solid #ed6c00;
+}
+.borderTed6c00 {
+    border-top: 0.1rem solid #ed6c00;
+}
+.borderBed6c00 {
+    border-bottom: 0.1rem solid #ed6c00;
+}
+.border444 {
+    border: 0.1rem solid #444;
+}
+.borderL444 {
+    border-left: 0.1rem solid #444;
+}
+.borderR444 {
+    border-right: 0.1rem solid #444;
+}
+.borderT444 {
+    border-top: 0.1rem solid #444;
+}
+.borderB444 {
+    border-bottom: 0.1rem solid #444;
+}
+/*字体*/
+.colorfff {
+    color: #fff;
+}
+.color333 {
+    color: #333;
+}
+.color444 {
+    color: #444;
+}
+.color666 {
+    color: #666;
+}
+.color999 {
+    color: #999;
+}
+.colored6c00 {
+    color: #ed6c00;
+}
+.color0cb326 {
+    color: #0cb326;
+}
+.colorff0000 {
+    color: #ff0000;
+}
+.color007aff {
+    color: #007aff;
+}
+/*字体对其*/
+.textC {
+    text-align: center;
+}
+.textL {
+    text-align: left;
+}
+.textR {
+    text-align: right;
+}
+/*字号*/
+.fs1_2 {
+    font-size: 1.2rem;
+}
+.fs1_4 {
+    font-size: 1.4rem;
+}
+.fs1_6 {
+    font-size: 1.6rem;
+}
+.fs1_8 {
+    font-size: 1.8rem;
+}
+.fs2_0 {
+    font-size: 2.0rem;
+}
+.fs2_4 {
+    font-size: 2.4rem;
+}
+.fs4_0 {
+    font-size: 4rem;
+}
+/*字样式*/
+.fontN {
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+/*文字 - 超出一行省略号*/
+.text1sl {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*显示隐藏*/
+.block {
+    display: block;
+}
+.none {
+    display: none;
+}
+/*边距*/
+.mR0 {
+    margin-right: 0 !important;
+}
+.pR0 {
+    padding-right: 0 !important;
+}
+/*超出显示*/
+.overA {
+    overflow: auto !important;
+}
+.overH {
+    overflow: hidden;
+}
+/*定位*/
+.poR {
+    position: relative;
+}
+.poA {
+    position: absolute;
+}
+.poF {
+    position: fixed;
+}
+/*单选*/
+.radio {
+    display: block;
+    background: url(../img/radio.png) no-repeat left center / 1.8rem;
+}
+.radio_hover {
+    background: url(../img/radio_hover.png) no-repeat left center / 1.8rem;
+}
+/*多选*/
+.checked {
+    display: block;
+    background: url(../img/check.png) no-repeat center left / 1.8rem;
+}
+.checked_hover {
+    background: url(../img/check_over.png) no-repeat center left / 1.8rem;
+}
+/*按钮*/
+.buttom_1 {
+    background: #ed6c00;
+    display: block;
+    color: #fff;
+    font-size: 2.0rem;
+    text-align: center;
+    float: none;
+    border: none;
+    border-radius: 0.5rem;
+    width: 92%;
+    line-height: 4.25rem;
+    height: 4.25rem;
+    margin: 2rem auto;
+}
+.buttom_2 {
+    font-size: 2.0rem;
+    display: block;
+    text-align: center;
+    float: none;
+    color: #ed6c00 !important;
+    border: 0.1rem solid #ed6c00 !important;
+    float: none !important;
+    width: 92% !important;
+    background: rgba(0, 0, 0, 0) !important;
+    margin: 2rem auto !important;
+    height: 4.25rem !important;
+    line-height: 4.25rem !important;
+    border-radius: 0.5rem !important;
+}
+.buttom_2 span {
+    background: url(../img/tianjia.png) no-repeat left center / 1.8rem;
+    padding: 0 2.2rem;
+}
+/*导航*/
+.nav {
+    width: 16%;
+    height: 100%;
+    overflow: auto !important;
+    position: absolute;
+    font-size: 1.8rem;
+    color: #fff;
+    background: #333;
+    float: left;
+    top: 0;
+    left: 0;
+}
+.nav .nav_1 {
+    border-bottom: 0.1rem solid #444;
+    text-align: center;
+    height: 9rem;
+}
+.nav .nav_1 a {
+    color: #fff;
+    display: block;
+    height: 100%;
+    font-size: 1.4rem;
+}
+.nav .nav_1 a i {
+    display: block;
+    padding: 3rem 0 0.3rem 0;
+}
+.nav .nav_list p {
+    border-bottom: 0.1rem solid #444;
+    height: 5rem;
+    line-height: 5rem;
+    background: url(../img/nav_j1.png) no-repeat 90% center;
+}
+.nav .nav_list p img {
+    margin: 0 0.9rem 0 1rem;
+}
+.nav .nav_list p.p_hover {
+    background: url(../img/nav_j2.png) no-repeat 90% center;
+}
+.nav .nav_list ul {
+    background: #666;
+    text-align: center;
+    display: none;
+}
+.nav .nav_list ul li {
+    border-bottom: 0.1rem solid #444;
+    height: 5rem;
+    line-height: 5rem;
+}
+.nav .nav_list ul li a {
+    display: block;
+    color: #fff;
+}
+.nav .nav_list ul li.navli_hover {
+    background: #575555;
+    border-left: 0.1rem solid #ed6c00;
+    border-left-width: 0.5rem;
+}
+/*内容框架*/
+.content {
+    position: relative;
+    float: right;
+    width: 84%;
+    overflow: auto !important;
+    height: 100%;
+    /*border-top: 0.9rem solid #333;*/
+    z-index: 1;
+}
+.content .content_hr {
+    display: block;
+    width: 100%;
+    height: 4.2rem;
+    border: none;
+}
+/*内容title*/
+.title {
+    position: absolute;
+    background: #ed6c00;
+    overflow: hidden;
+    width: 100%;
+    z-index: 90;
+}
+.title h2 {
+    color: #fff;
+    text-align: center;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-size: 2.0rem;
+    border-bottom: 0.1rem solid #dddee3;
+    height: 4.2rem;
+    line-height: 4.2rem;
+}
+.title i {
+    position: absolute;
+    display: block;
+    width: 2rem;
+    top: 1.1rem;
+    left: 1.5rem;
+    line-height: normal;
+}
+.title i img {
+    width: 100%;
+}
+.title a {
+    position: absolute;
+    display: block;
+    width: 1rem;
+    top: 1.1rem;
+    right: 1.5rem;
+}
+.title a img {
+    width: 100%;
+}
+/*内容 - 切换按钮*/
+.content_tab {
+    background: #f9f9f9;
+    border-top: 0.1rem solid #dddee3;
+    border-bottom: 0.1rem solid #dddee3;
+    font-size: 1.6rem;
+    height: 4rem;
+    margin-top: 1.6rem;
+    padding: 0 2rem;
+}
+.content_tab a {
+    position: relative;
+    display: block;
+    float: left;
+    height: 4rem;
+    line-height: 4rem;
+    color: #333;
+    padding: 0 1rem;
+    margin-right: 1.5rem;
+}
+.content_tab a.stay_tab {
+    border-bottom: 0.1rem solid #ed6c00;
+    border-bottom-width: 3px;
+}
+.content_tab a span {
+    font-size: 1.2rem;
+    overflow: hidden;
+    display: block;
+    color: #fff;
+    background: #ed6c00;
+    position: absolute;
+    text-align: center;
+    top: 0.5rem;
+    right: -0.5rem;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.content_tab + .table_list {
+    margin-top: 0;
+    border-top: 0;
+}
+/*内容 - 搜索*/
+.content_soso {
+    margin-top: 1.6rem;
+    background: #fff;
+    border-top: 0.1rem solid #dddee3;
+    border-bottom: 0.1rem solid #dddee3;
+    color: #666;
+    height: 5.4rem;
+    line-height: 5.4rem;
+    padding: 0 2rem;
+}
+.content_soso p {
+    float: left;
+    font-size: 1.4rem;
+}
+.content_soso p.soso_name {
+    width: 44%;
+}
+.content_soso p.soso_name input {
+    width: 56%;
+}
+.content_soso p.soso_date {
+    width: 48%;
+}
+.content_soso p.soso_date input {
+    width: 33%;
+}
+.content_soso p span {
+    float: left;
+    margin-right: 1.2rem;
+}
+.content_soso p em {
+    float: left;
+    font-weight: normal !important;
+    font-style: normal !important;
+    margin: 0 0.5rem;
+}
+.content_soso input {
+    float: left;
+    border: 0.1rem solid #dddee3;
+    color: #999;
+    height: 2.25rem;
+    padding: 0 0.5rem;
+    font-family: "微软雅黑";
+    margin: 1.55rem 0 0 0;
+}
+.content_soso input.taskInputdate {
+    background: url(../img/date.png) no-repeat 94% center / 1.4rem;
+}
+.content_soso .soso_button {
+    float: left;
+    background: #ed6c00;
+    color: #fff;
+    width: 8%;
+    border: none;
+    border-radius: 0.5rem;
+}
+/*SKU搜索*/
+.so_sku {
+    margin-top: 1.6rem;
+    background: #fff;
+    border-top: 0.1rem solid #dddee3;
+    border-bottom: 0.1rem solid #dddee3;
+    height: 4.25rem;
+    line-height: 4.25rem;
+}
+.so_sku input {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+.so_sku input.sku_so {
+    margin-left: 22%;
+    width: 18%;
+}
+.so_sku input.sku_sku {
+    width: 30%;
+}
+.so_sku input.sku_an {
+    float: left;
+    background: #ed6c00;
+    color: #fff;
+    width: 8%;
+    border: none;
+    border-radius: 0.5rem;
+}
+/*内容 - 文字提示*/
+.content_notes {
+    font-size: 1.6rem;
+    color: #666;
+    padding: 0 2rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    background: rgba(238, 121, 24, 0.3);
+}
+.content_notes + .table_list {
+    margin-top: 0;
+    border-top: 0;
+}
+/*内容标题*/
+.className {
+    font-weight: normal !important;
+    font-style: normal !important;
+    overflow: hidden;
+    border-bottom: 0.1rem solid #dddee3;
+    background: #f2f2f4;
+    font-size: 1.6rem;
+    color: #333;
+    height: 3.7rem;
+    line-height: 4.2rem;
+    padding-left: 2rem;
+}
+.className p {
+    float: right;
+}
+.className p a {
+    color: #007aff;
+    margin-right: 2.2rem;
+}
+/*内容导航*/
+.content_nav {
+    margin-top: 1.6rem;
+    background: #fff;
+    overflow: hidden;
+    border-top: 0.1rem solid #dddee3;
+    border-bottom: 0.1rem solid #dddee3;
+    padding: 1%;
+}
+.content_nav li {
+    float: left;
+    text-align: center;
+    border: 0.1rem solid #dddee3;
+    font-size: 1.8rem;
+    height: 4rem;
+    line-height: 4rem;
+    width: 14%;
+    margin: 1.3%;
+    border-radius: 0.4rem;
+}
+.content_nav li a {
+    color: #333;
+}
+.content_nav li.content_navover {
+    color: #fff;
+    background: #ed6c00;
+}
+.content_nav li.content_navover a {
+    color: #fff;
+}
+.content_nav + .table_list {
+    margin-top: 0;
+    border-top: 0;
+}
+/*内容table*/
+.table_list {
+    margin-top: 1.6rem;
+    width: 100%;
+    border-top: 0.1rem solid #dddee3;
+}
+.table_list tr {
+    background: #fff;
+    color: #666;
+    height: 6rem;
+}
+.table_list tr.table_listTr {
+    background: #f9f9f9;
+    height: 4rem;
+}
+.table_list tr.table_listTr th {
+    border-bottom: 0.1rem solid #dddee3;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: normal !important;
+    font-style: normal !important;
+    padding: 0.5rem;
+}
+.table_list tr td {
+    border-bottom: 0.1rem solid #dddee3;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+.table_list tr td.textL {
+    text-align: left;
+}
+.table_list tr td a.td_none {
+    color: #666;
+}
+.table_list tr td a.td_an {
+    width: 100%;
+    display: block;
+    border: 0.1rem solid #ed6c00;
+    color: #ed6c00;
+    overflow: hidden;
+    font-size: 1.4rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 0.4rem;
+    margin: 0.65rem 0;
+}
+.table_list tr td span {
+    display: block;
+    float: left;
+}
+.table_list tr td span.Jian,
+.table_list tr td span.Jia {
+    text-align: center;
+    border: 0.1rem solid #dddee3;
+    font-size: 2.0rem;
+    width: 20%;
+    height: 2.25rem;
+    line-height: 2.05rem;
+}
+.table_list tr td span:hover {
+    background: #f1f1f1;
+    color: #999;
+}
+.table_list tr td span.Jian {
+    border-right: none;
+    border-radius: .3rem 0 0 .3rem;
+}
+.table_list tr td span.Jia {
+    border-left: none;
+    border-radius: 0 .3rem .3rem 0;
+}
+.table_list tr td input {
+    margin: 0;
+}
+.table_list tr td input.J_num {
+    width: 50%;
+    max-width: 6rem;
+    text-align: center;
+    border-radius: 0;
+}
+.table_list tr td label {
+    display: block;
+    margin: 0 auto;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.table_list tr td em {
+    display: block;
+}
+.table_list tr td em.em_an {
+    width: 100%;
+    display: block;
+    border: 0.1rem solid #dddee3;
+    color: #999;
+    overflow: hidden;
+    font-size: 1.4rem;
+    font-weight: normal !important;
+    font-style: normal !important;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    border-radius: 0.4rem;
+    margin: 0.5rem 0;
+}
+.table_list .td_pInput {
+    border: 0.1rem solid #dddee3;
+    border-radius: .3rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+}
+/*内容 - input*/
+input {
+    border: 0.1rem solid #dddee3;
+    color: #999;
+    float: left;
+    height: 2.25rem;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    font-family: "微软雅黑";
+    margin-right: 0.4rem;
+    border-radius: .3rem;
+}
+input.taskInputdate {
+    background: url(../img/date.png) no-repeat 94% center / 1.4rem;
+    width: 12.5rem;
+}
+input.taskStageinput {
+    width: 6rem;
+}
+input.taskPenaltyinput {
+    width: 8rem;
+}
+/*登录*/
+.login {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(../img/bj.png) no-repeat center center / 100% 100%;
+}
+.login .longin_bj {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(150, 121, 89, 0.4);
+}
+.login .longin_bj img {
+    display: block;
+    margin: 0 auto;
+    width: 10rem;
+    margin: 5rem auto 1.2rem;
+}
+.login .longin_bj h1 {
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-align: center;
+    font-size: 4rem;
+    color: #855530;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+}
+.login .longin_bj input {
+    display: block;
+    margin: 0 auto;
+    font-size: 2.0rem;
+    color: #fff;
+    float: none;
+    font-family: "微软雅黑";
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: rgba(0, 0, 0, 0);
+    height: 4.2rem;
+    width: 50rem;
+    margin-top: 3rem;
+    padding: 0 3rem;
+}
+.login .longin_bj input.longin_name {
+    background-image: url(../img/longin_name.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+}
+.login .longin_bj input.longin_password {
+    background-image: url(../img/longin_password.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+}
+.login .longin_bj input.longin_an {
+    background: #ed6c00;
+    font-size: 2.4rem;
+    font-weight: normal !important;
+    font-style: normal !important;
+    border: none;
+    border-radius: 5px;
+}
+.login .longin_bj input:-ms-input-placeholder,
+.login .longin_bj textarea:-ms-input-placeholder {
+    color: #fff;
+}
+.login .longin_bj input::-webkit-input-placeholder,
+.login .longin_bj textarea::-webkit-input-placeholder {
+    color: #fff;
+}
+.login .longin_bj p {
+    margin: 0 auto;
+    width: 50rem;
+    height: 5rem;
+    line-height: 3rem;
+    padding: 1rem 0;
+}
+.login .longin_bj p input {
+    display: none;
+    line-height: ;
+}
+.login .longin_bj p label {
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 2.0rem;
+    padding-left: 3rem;
+}
+.login .longin_bj p label.checked {
+    background: url(../img/dx.png) no-repeat center left / 2rem;
+}
+.login .longin_bj p label.checked_hover {
+    background: url(../img/dx_hover.png) no-repeat center left / 2rem;
+}
+.login .longin_bj p a {
+    float: right;
+    font-size: 2.0rem;
+    color: #fff;
+}
+/*首页*/
+.home {
+    overflow: hidden;
+    width: 100%;
+}
+.home .home_top {
+    border-bottom: 0.1rem solid #dddee3;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    padding: 1.6rem 0 1.3rem 2rem;
+}
+.home .home_top i {
+    display: block;
+    float: left;
+    margin-right: 1.6rem;
+}
+.home .home_top .home_name {
+    float: left;
+    width: 60%;
+}
+.home .home_top .home_name h2 {
+    font-size: 2.0rem;
+    font-weight: normal !important;
+    font-style: normal !important;
+    color: #333;
+    padding: 1.4rem 0 1.6rem 0;
+}
+.home .home_top .home_name h2 span {
+    color: #666;
+    margin-left: 1rem;
+}
+.home .home_top .home_name p {
+    float: left;
+    font-size: 1.6rem;
+    color: #666;
+    text-align: center;
+    width: 25%;
+}
+.home .home_top .home_name p span {
+    display: block;
+    color: #ed6c00;
+    margin-bottom: 0.6rem;
+}
+.home .home_top .home_name p span img {
+    width: 100%;
+}
+.home .home_top a {
+    position: absolute;
+    color: #ed6c00;
+    font-size: 1.6rem;
+    top: 1.8rem;
+    right: 2rem;
+}
+.home .home_nav {
+    background: #fff;
+    border-bottom: 0.1rem solid #dddee3;
+    padding: 1.7rem 2rem 0;
+    height: 11.7rem;
+}
+.home .home_nav a {
+    display: block;
+    text-align: center;
+    float: left;
+    font-size: 2.4rem;
+    color: #fff;
+    overflow: hidden;
+    width: 22%;
+    height: 8rem;
+    line-height: 8rem;
+    margin: 0 3% 0 0;
+}
+.home .home_nav a.home_nav1 {
+    background: #00a8ff;
+}
+.home .home_nav a.home_nav2 {
+    background: #e94e30;
+}
+.home .home_nav a.home_nav3 {
+    background: #f4a000;
+}
+.home .home_nav a.home_nav4 {
+    background: #85d757;
+}
+.home .houme_work {
+    overflow: hidden;
+}
+.home .houme_work .houme_title {
+    font-weight: normal !important;
+    font-style: normal !important;
+    color: #333;
+    font-size: 1.6rem;
+    border-bottom: 0.1rem solid #dddee3;
+    height: 4rem;
+    line-height: 4.4rem;
+    padding-left: 2rem;
+}
+.home .houme_work .houme_workTab {
+    font-size: 1.6rem;
+    color: #333;
+    background: #f9f9f9;
+    border-bottom: 0.1rem solid #dddee3;
+    padding: 0 2rem;
+    height: 4.2rem;
+}
+.home .houme_work .houme_workTab p {
+    float: left;
+    position: relative;
+    margin: .2rem 1rem 0 0;
+    padding: 1.2rem 1rem 0;
+    height: 4rem;
+}
+.home .houme_work .houme_workTab p small {
+    position: absolute;
+    background: #ed6c00;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    right: -1rem;
+    top: 0.7rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+}
+.home .houme_work .houme_workTab p.houme_workOver {
+    border-bottom: 0.1rem solid #ed6c00;
+    border-bottom-width: 0.2rem;
+}
+.home .houme_work ul {
+    display: block;
+}
+.home .houme_work ul li {
+    border-bottom: 0.1rem solid #dddee3;
+    background: #f9f9f9;
+    font-size: 1.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-image: url(../img/jin.png);
+    background-position: 96%  center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    padding: 0 2rem;
+    height: 4.2rem;
+    line-height: 4.2rem;
+}
+.home .houme_work ul li a {
+    display: block;
+    color: #666;
+    padding-right: 3rem;
+}
+.home .houme_work ul.houmel2,
+.home .houme_work ul.houmel3 {
+    display: none;
+}
+.home .houme_notice {
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.home .houme_notice .houme_title {
+    font-weight: normal !important;
+    font-style: normal !important;
+    color: #333;
+    font-size: 1.6rem;
+    border-bottom: 0.1rem solid #dddee3;
+    height: 4rem;
+    line-height: 4.4rem;
+    padding-left: 2rem;
+}
+.home .houme_notice .houme_workTab {
+    font-size: 1.6rem;
+    color: #333;
+    background: #f9f9f9;
+    border-bottom: 0.1rem solid #dddee3;
+    padding: 0 2rem;
+    height: 4.2rem;
+}
+.home .houme_notice .houme_workTab p {
+    float: left;
+    position: relative;
+    margin: .2rem 1rem 0 0;
+    padding: 1.2rem 1rem 0;
+    height: 4rem;
+}
+.home .houme_notice .houme_workTab p small {
+    position: absolute;
+    background: #ed6c00;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    right: -1rem;
+    top: 0.7rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+}
+.home .houme_notice .houme_workTab p.houme_workOver {
+    border-bottom: 0.1rem solid #ed6c00;
+    border-bottom-width: 0.2rem;
+}
+.home .houme_notice ul {
+    display: block;
+}
+.home .houme_notice ul li {
+    border-bottom: 0.1rem solid #dddee3;
+    background: #f9f9f9;
+    font-size: 1.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-image: url(../img/jin.png);
+    background-position: 96%  center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    padding: 0 2rem;
+    height: 4.2rem;
+    line-height: 4.2rem;
+}
+.home .houme_notice ul li a {
+    display: block;
+    color: #666;
+    padding-right: 3rem;
+}
+.home .houme_notice ul.houmel2,
+.home .houme_notice ul.houmel3 {
+    display: none;
+}
+.home .edition {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    color: #999;
+    margin-bottom: 1rem;
+    line-height: 1.6rem;
+    width: 8.5rem;
+}
+.home .edition hr {
+    width: 100%;
+    position: absolute;
+    font-size: 1.2rem;
+    height: 1px;
+    border: none;
+    background: #999;
+    top: 0.75rem;
+}
+.home .edition span {
+    position: relative;
+    background: #f2f2f4;
+    z-index: 1;
+    padding: 0 0.4rem;
+}
+/*任务包验收单*/
+.taskCheck {
+    background: #fff;
+}
+.taskCheck .taskCheck_deta {
+    border-bottom: 0.1rem solid #dddee3;
+    overflow: hidden;
+    color: #333;
+    padding: 1rem 0;
+}
+.taskCheck .taskCheck_deta p {
+    float: left;
+    font-size: 1.4rem;
+    width: 50%;
+    padding: 0 2rem 0;
+    line-height: 2.8rem;
+}
+.taskCheck .taskCheck_deta p span {
+    display: block;
+    float: left;
+    color: #999;
+    width: 8rem;
+}
+.taskCheck .taskCheck_deta p i {
+    font-weight: normal !important;
+    font-style: normal !important;
+    display: block;
+    float: left;
+}
+.taskCheck .taskProject {
+    overflow: hidden;
+}
+.taskCheck .taskProject p {
+    border-bottom: 0.1rem solid #dddee3;
+    font-size: 1.4rem;
+    min-height: 4.25rem;
+    line-height: 4.25rem;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+.taskCheck .taskProject p.flexInput {
+    display: flex;
+    padding-right: 0;
+    background: url(../img/jin.png) no-repeat 98% center / 1rem;
+}
+.taskCheck .taskProject p.flexInput input {
+    flex: 1;
+    padding-right: 3rem;
+    border: 0;
+    background-position: right center;
+    background-origin: content-box;
+}
+.taskCheck .taskProject p span {
+    display: block;
+    float: left;
+    color: #999;
+    width: 8rem;
+}
+.taskCheck .taskProject p span.rating {
+    width: 100%;
+    padding-left: 8rem;
+    color: #333;
+}
+.taskCheck .taskProject p span.tips {
+    float: initial;
+    display: inline-block;
+    white-space: nowrap;
+    color: #999;
+}
+.taskCheck .taskProject p span.tips b {
+    display: inline-block;
+    margin-left: 5rem;
+    color: #ed6c00;
+}
+.taskCheck .taskProject p label {
+    float: left;
+    margin-right: 5rem;
+    width: 8rem;
+    padding-left: 2.2rem;
+}
+.taskCheck .taskProject p i {
+    float: left;
+    display: none;
+    width: auto;
+    margin-left: -5rem;
+}
+.taskCheck .taskProject p i em {
+    font-weight: normal !important;
+    font-style: normal !important;
+    float: left;
+    margin-right: 0.6rem;
+}
+.taskCheck .taskSingle {
+    overflow: hidden;
+}
+.taskCheck .taskSingle .table_list {
+    margin-top: 0;
+    border-top: 0;
+}
+.taskCheck .taskCount {
+    overflow: hidden;
+    font-size: 1.4rem;
+    border-bottom: 0.1rem solid #dddee3;
+    height: 6rem;
+    line-height: 6rem;
+}
+.taskCheck .taskCount span {
+    float: left;
+    color: #999;
+    padding: 0 1.8rem 0 2rem;
+}
+.taskCheck .taskCount input {
+    width: 13.5rem;
+    margin-top: 1.85rem;
+}
+.taskCheck .taskCount em {
+    font-weight: normal !important;
+    font-style: normal !important;
+    float: left;
+    color: #666;
+}
+.taskCheck .taskCount a {
+    float: right;
+    display: block;
+    border: 0.1rem solid #ed6c00;
+    color: #ed6c00;
+    text-align: center;
+    margin-right: 2rem;
+    width: 9rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    margin-top: 1.85rem;
+    border-radius: 0.5rem;
+}
+.taskCheck .taskJunction {
+    overflow: hidden;
+    font-size: 1.4rem;
+    border-bottom: 0.1rem solid #dddee3;
+    height: 6rem;
+    line-height: 6rem;
+    height: auto;
+}
+.taskCheck .taskJunction span {
+    float: left;
+    color: #999;
+    padding: 0 1.8rem 0 2rem;
+}
+.taskCheck .taskJunction input {
+    width: 13.5rem;
+    margin-top: 1.85rem;
+}
+.taskCheck .taskJunction em {
+    font-weight: normal !important;
+    font-style: normal !important;
+    float: left;
+    color: #666;
+}
+.taskCheck .taskJunction a {
+    float: right;
+    display: block;
+    border: 0.1rem solid #ed6c00;
+    color: #ed6c00;
+    text-align: center;
+    margin-right: 2rem;
+    width: 9rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    margin-top: 1.85rem;
+    border-radius: 0.5rem;
+}
+.taskCheck .taskJunction div {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    color: #999;
+    position: relative;
+    padding-left: 2rem;
+    top: -1rem;
+    line-height: 2;
+    z-index: 0;
+}
+.taskCheck .taskMatch {
+    overflow: hidden;
+}
+.taskCheck .taskMatch .table_list {
+    margin-top: 0;
+    border-top: 0;
+}
+.taskCheck .taskMatch input {
+    text-align: center;
+}
+.taskMaterial {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 4rem;
+}
+.taskMaterial .taskMaterialB {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.taskMaterial .taskMaterialB img {
+    width: 2.5rem;
+}
+.taskMaterial .taskMaterialT {
+    background: #f2f2f4;
+    height: 100%;
+    overflow: auto !important;
+    float: right;
+    position: relative;
+    top: 0;
+    width: 80%;
+    z-index: 1;
+    padding-top: 3.75rem;
+    right: -100%;
+}
+.taskMaterial .taskMaterialT .taskMaterialname {
+    width: 100%;
+    font-size: 1.6rem;
+    color: #666;
+    position: absolute;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    background: rgba(238, 121, 24, 0.3);
+    padding-left: 1.7rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.taskMaterial .taskMaterialT .taskMaterialname a {
+    display: block;
+    float: right;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1.1rem 1.6rem 0 0;
+}
+.taskMaterial .taskMaterialT .taskMaterialname a img {
+    width: 100%;
+    float: left;
+}
+.taskMaterial .taskMaterialT .taskMaterialname + .table_list {
+    margin-top: 0;
+    border-top: 0;
+}
+.taskMaterial .taskStaff {
+    background: #f2f2f4;
+    height: 100%;
+    overflow: hidden;
+    float: right;
+    position: absolute;
+    font-size: 1.4rem;
+    width: 60%;
+    z-index: 1;
+    right: -100%;
+    padding: 1.3rem 0;
+}
+.taskMaterial .taskStaff .taskPremiumA {
+    margin: 0 auto;
+    border: 0.1rem solid #dddee3;
+    color: #333;
+    background: #fff;
+    width: 92%;
+    border-bottom: none;
+    overflow: hidden;
+    border-bottom: 0.1rem solid #dddee3;
+    padding: 0 1.7rem;
+}
+.taskMaterial .taskStaff .taskPremiumA .taskStaffAso {
+    width: 100%;
+    border-bottom: 0.1rem solid #dddee3;
+    height: 6rem;
+    line-height: 6rem;
+    padding: 0 1.7rem;
+}
+.taskMaterial .taskStaff .taskPremiumA .taskStaffAso span {
+    float: left;
+    margin-right: 1.6rem;
+}
+.taskMaterial .taskStaff .taskPremiumA p {
+    border-bottom: 0.1rem solid #dddee3;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 1.7rem;
+}
+.taskMaterial .taskStaff .taskPremiumA p span {
+    float: left;
+    display: block;
+    padding-right: 1rem;
+}
+.taskMaterial .taskStaff .taskPremiumA p span.taskStaffA_name {
+    width: 6rem;
+}
+.taskMaterial .taskStaff .taskPremiumA p span.taskStaffA_work {
+    width: 8rem;
+    text-align: center;
+}
+.taskMaterial .taskStaff .taskPremiumA p span.taskStaffA_tel {
+    width: 10rem;
+}
+.taskMaterial .taskStaff .taskPremiumA p input {
+    margin: 0.95rem 0 0 2.7rem;
+}
+.taskMaterial .taskStaff .taskPremiumA input {
+    float: left;
+    margin: 1.95rem 3.5rem 0 0;
+    width: 17rem;
+}
+.taskMaterial .taskStaff .taskPremiumA .taskinputButton {
+    float: left;
+    background: #fff;
+    border: 0.1rem solid #ed6c00;
+    color: #ed6c00;
+    width: 7rem;
+    border-radius: 0.5rem;
+}
+.taskMaterial .taskStaff .taskPremiumA strong {
+    font-weight: normal !important;
+    font-style: normal !important;
+    display: block;
+    color: #333;
+    padding: 1.3rem 0 1.1rem 0;
+}
+.taskMaterial .taskStaff .taskPremiumA strong span {
+    color: #ed6c00;
+}
+.taskMaterial .taskStaff .taskPremiumA em {
+    font-weight: normal !important;
+    font-style: normal !important;
+    color: #666;
+    display: block;
+    padding-bottom: 1.3rem;
+}
+.taskMaterial .taskStaff .taskStaffA {
+    margin: 0 auto;
+    border: 0.1rem solid #dddee3;
+    color: #333;
+    background: #fff;
+    width: 92%;
+    border-bottom: none;
+}
+.taskMaterial .taskStaff .taskStaffA .taskStaffAso {
+    width: 100%;
+    border-bottom: 0.1rem solid #dddee3;
+    height: 6rem;
+    line-height: 6rem;
+    padding: 0 1.7rem;
+}
+.taskMaterial .taskStaff .taskStaffA .taskStaffAso span {
+    float: left;
+    margin-right: 1.6rem;
+}
+.taskMaterial .taskStaff .taskStaffA p {
+    border-bottom: 0.1rem solid #dddee3;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 1.7rem;
+}
+.taskMaterial .taskStaff .taskStaffA p span {
+    float: left;
+    display: block;
+    padding-right: 1rem;
+}
+.taskMaterial .taskStaff .taskStaffA p span.taskStaffA_name {
+    width: 6rem;
+}
+.taskMaterial .taskStaff .taskStaffA p span.taskStaffA_work {
+    width: 8rem;
+    text-align: center;
+}
+.taskMaterial .taskStaff .taskStaffA p span.taskStaffA_tel {
+    width: 10rem;
+}
+.taskMaterial .taskStaff .taskStaffA p input {
+    margin: 0.95rem 0 0 2.7rem;
+}
+.taskMaterial .taskStaff .taskStaffA input {
+    float: left;
+    margin: 1.95rem 3.5rem 0 0;
+    width: 17rem;
+}
+.taskMaterial .taskStaff .taskStaffA .taskinputButton {
+    float: left;
+    background: #fff;
+    border: 0.1rem solid #ed6c00;
+    color: #ed6c00;
+    width: 7rem;
+    border-radius: 0.5rem;
+}
+/*付款分配明细*/
+.paymentDetailed {
+    border-bottom: 0.1rem solid #dddee3;
+    font-size: 1.6rem;
+    background: #fff;
+    height: 6rem;
+    line-height: 6rem;
+}
+.paymentDetailed p {
+    float: right;
+    color: #666;
+    padding-right: 3rem;
+}
+.paymentDetailed p span {
+    color: #ed6c00;
+}
+/*进度通报*/
+.paper {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+.paper li {
+    width: 100%;
+    overflow: hidden;
+}
+.paper li .paper_ico {
+    display: none;
+    position: relative;
+    border-bottom: 0.1rem solid #dddee3;
+    background: #f9f9f9;
+    text-align: center;
+    padding: 2rem 0 0;
+}
+.paper li .paper_ico h6 {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: normal !important;
+    font-style: normal !important;
+    color: #666;
+    margin-bottom: 2rem;
+    width: 14.66%;
+    vertical-align: top;
+}
+.paper li .paper_ico h6 i {
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    border: 0.4rem solid transparent;
+    background: url(../img/paper.png) no-repeat top center / 100%;
+}
+.paper li .paper_ico h6 i.paperover {
+    position: relative;
+    z-index: 3;
+    border: none;
+    background: url(../img/paper_hover.png) no-repeat top center / 100%;
+}
+.paper li .paper_ico h6 span {
+    display: block;
+    line-height: 1.6rem;
+}
+.paper li .paper_ico h6 hr {
+    display: block;
+    position: absolute;
+    background: #d8d8d8;
+    border: none;
+    width: 100%;
+    top: 1rem;
+    right: -50%;
+    z-index: 2;
+    height: 1px;
+}
+.paper li .paper_ico h6:nth-child(6n) hr {
+    display: none;
+}
+.paper li .paper_ico h6:last-child hr {
+    display: none;
+}
+.paper li .paper_ico:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: -0.8rem;
+    left: 60%;
+    z-index: 100;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #f9f9f9;
+    border-top: 0.1rem solid #dddee3;
+    border-left: 0.1rem solid #dddee3;
+    transform: rotateZ(45deg);
+}
+.paper li .table_list {
+    margin-top: 0;
+    border-top: 0;
+}
+/*施工工艺*/
+.content_nav_bulid li {
+    min-width: 14rem;
+    cursor: pointer;
+}
+.table_list_bulid tr.table_listTr th {
+    padding: 0 2rem;
+}
+.table_list_bulid tr.table_listTr th:last-child {
+    text-align: right;
+    padding-right: 3rem;
+}
+.table_list_bulid tr td {
+    text-align: left;
+    line-height: 1.4;
+    padding: 1.4rem 2rem;
+}
+.table_list_bulid tr td.textR {
+    text-align: right;
+    white-space: nowrap;
+}
+.table_list_bulid tr td.textC {
+    text-align: center;
+}
+.table_list_bulid tr td strong {
+    color: #ed6c00;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+.icon_violate {
+    background: #ed6c00;
+    color: #fff;
+    font-weight: normal !important;
+    font-style: normal !important;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 100%;
+    width: 1.4rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    font-size: 1rem;
+}
+/*任务调整*/
+.taskRectify {
+    padding-top: 4.2rem;
+}
+.taskRectify .taskMaterialB {
+    top: 4.2rem;
+}
+.taskRectify .taskMaterialT {
+    padding-top: 1.5rem;
+}
+.taskRectify .rectifyWrap {
+    border: 0.1rem solid #dddee3;
+    background: #fff;
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0 2rem;
+    padding: 2rem;
+    line-height: 1.4;
+}
+.taskRectify .rectifyWrap input {
+    display: block;
+    float: none;
+    margin-top: 1.5rem;
+    width: 24.5rem;
+}
+.taskRectify .rectifyWrap input.taskInputdate {
+    background-position: 96% center;
+}
+.taskRectify .rectifyWrap .tips {
+    font-size: 1.2rem;
+    color: #ed6c00;
+    margin-top: 1.5rem;
+}
+/*查看任务*/
+.currentTack {
+    border-bottom: 0.1rem solid #dddee3;
+    background: #f9f9f9;
+    color: #666;
+    font-size: 1.4rem;
+    padding: .9rem 2rem;
+    height: 4.2rem;
+}
+.currentTack .name {
+    padding-top: 0.8rem;
+}
+.currentTack button {
+    border: 0.1rem solid #ed6c00;
+    color: #ed6c00;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    padding: 0 1rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: none;
+    border-radius: 0.4rem;
+}
+.currentTack button.add:before {
+    content: "+";
+    display: inline-block;
+    margin: -0.1rem 0.2rem 0 0;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+.table_list_task tr th:first-child {
+    padding-left: 2rem;
+}
+.table_list_task tr th:last-child {
+    padding-right: 2rem;
+}
+.table_list_task tr th.textL {
+    text-align: left;
+}
+.table_list_task tr td:first-child {
+    padding-left: 2rem;
+    text-align: left;
+}
+.table_list_task tr td:last-child {
+    padding-right: 2rem;
+}
+.table_list_task tr td select {
+    border: 0.1rem solid #dddee3;
+    color: #999;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 14rem;
+    height: 2.25rem;
+    padding: 0 0.5rem;
+    background: url(../img/select.png) no-repeat right center / 2.25rem;
+}
+.table_list_task tr td select option {
+    text-align: center;
+}
+.table_list_task tr td .taskInputdate {
+    float: none;
+}
+.table_list_taskDet tr:nth-child(n+1) td:first-child {
+    text-indent: 1rem;
+}
+/* 修改密码 */
+.changePW {
+    margin: 3.3rem auto;
+    max-width: 580px;
+    font-size: 1.4rem;
+}
+.changePW .formGroup {
+    margin-bottom: 1.6rem;
+    overflow: hidden;
+}
+.changePW .formGroup label {
+    display: inline-block;
+    padding-right: 1rem;
+    width: 25%;
+    line-height: 3.8rem;
+    text-align: right;
+    color: #666;
+}
+.changePW .formGroup p {
+    display: inline-block;
+    float: right;
+    position: relative;
+    width: 74%;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    border: 0.1rem solid #dddee3;
+    border-radius: .3rem;
+    background: #fff;
+}
+.changePW .formGroup input {
+    float: none;
+    margin: 0;
+    width: 100%;
+    height: 3.6rem;
+    border: 0;
+    vertical-align: top;
+    font-size: 1.4rem;
+}
+.changePW .formGroup input[type=text] {
+    color: #333;
+}
+.changePW .formGroup input[type=submit] {
+    float: right;
+    margin-top: 1rem;
+    width: 74%;
+    height: 4.16rem;
+    font-size: 2rem;
+    background: #ed6c00;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+.changePW .formGroup img {
+    display: inline-block;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 8.5rem;
+    height: 3rem;
+    border-radius: .3rem;
+    border: 0.1rem solid #d8d8d8;
+}
+.changePW .formGroup button {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 8.5rem;
+    height: 3rem;
+    border-radius: .3rem;
+    background: none;
+    border: 0;
+    font-size: 1.4rem;
+    color: #666;
+    font-family: "Microsoft YaHei";
+}
+/* 项目播报 */
+.projectForm {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+.projectForm h3 {
+    height: 5rem;
+    line-height: 5rem;
+    background: #f0d7c3;
+    color: #666;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: center;
+}
+.projectForm .formGroupBox {
+    background: #fff;
+    border-top: 0.1rem solid #dddee3;
+    border-bottom: 0.1rem solid #dddee3;
+}
+.projectForm .formGroupBox > :first-child {
+    border-top: 0;
+}
+.projectForm .formGroup {
+    position: relative;
+    padding: 1.5rem 2.4rem 1.5rem 0;
+    margin-left: 2.4rem;
+    min-height: 2.25rem;
+    line-height: 2.25rem;
+    border-top: 0.1rem solid #dddee3;
+}
+.projectForm .formGroup label {
+    position: absolute;
+    display: inline-block;
+    color: #999;
+}
+.projectForm .formGroup p {
+    padding-left: 10rem;
+    min-height: 2rem;
+}
+.projectForm .formGroup p.iconForward {
+    background: url(../img/jin.png) no-repeat right center / 1rem;
+}
+.projectForm .formGroup p label {
+    position: inherit;
+}
+.projectForm .formGroup p input {
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+    color: #666;
+    font-size: 1.4rem;
+    background: transparent;
+}
+.projectForm .formGroup p input[type=radio] {
+    width: 0;
+    opacity: 0;
+}
+.projectForm .formGroup p input[type=radio] + label {
+    padding-left: 2.5rem;
+    min-width: 15rem;
+}
+.projectForm .formGroup p input[type=date] {
+    background: url(../img/date.png) no-repeat right center / 1.4rem;
+    background-origin: content-box;
+    padding-left: .5rem;
+    padding-right: 2rem;
+}
+.projectForm .formGroup p input[type=number] {
+    background: transparent;
+}
+.projectForm .formGroup p.startStopTime input {
+    width: 48%;
+}
+.projectForm .formGroup p.startStopTime input.fR {
+    float: right;
+}
+.projectForm .formGroup textarea {
+    padding: 0.5rem;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 12rem;
+    font-size: 1.4rem;
+    border: 0;
+    background: #f2f2f4;
+}
+.projectForm .formGroup select {
+    width: 100%;
+    border: 0;
+    background: none;
+}
+.projectForm .longFormGroup p {
+    padding-left: 14rem;
+}
+.projectForm .submitWrap {
+    margin: 3rem 2.4rem 0;
+}
+.projectForm .submitWrap .addBtn {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 4.8rem;
+    border: 0.1rem solid #ed6c00;
+    border-radius: .5rem;
+    text-align: center;
+    line-height: 4.8rem;
+    font-size: 2rem;
+    color: #ed6c00;
+}
+.projectForm .submitWrap .addBtn:before {
+    content: "+";
+    display: inline-block;
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 1.6rem;
+    vertical-align: .1rem;
+    border: 0.1rem solid #ed6c00;
+    border-radius: 100%;
+    font-size: 1.8rem;
+}
+.projectForm .submitWrap input[type=submit] {
+    border: 0.1rem solid #ed6c00;
+}
+.projectForm .pmBuildDet {
+    border-top: 0.1rem solid #dddee3;
+}
+.projectForm .upBuildPic {
+    padding-top: 4rem;
+    min-height: 20.6rem;
+    overflow: hidden;
+}
+.projectForm .upBuildPic ul {
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+.projectForm .upBuildPic li {
+    float: left;
+    margin-right: 8rem;
+}
+.projectForm .upBuildPic li span {
+    display: block;
+    color: #999;
+    margin-bottom: 2rem;
+}
+.projectForm .upBuildPic li a {
+    clear: both;
+    display: block;
+    margin: 1rem auto;
+    width: 8.8rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    border-radius: .3rem;
+    border: 0.1rem solid #ed6c00;
+    color: #ed6c00;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.projectForm .upBuildPic img {
+    width: 15.4rem;
+    height: 15.4rem;
+}
+.projectForm .upBuildPic label {
+    position: relative;
+    float: left;
+    margin-right: 2rem;
+    width: 15.8rem;
+    height: 15.8rem;
+    border: 0.1rem solid #dddee3;
+    border-width: .2rem;
+    cursor: pointer;
+}
+.projectForm .upBuildPic label img {
+    position: absolute;
+    z-index: 10;
+}
+.projectForm .upBuildPic label:before {
+    content: "";
+    position: absolute;
+    top: 4.3rem;
+    left: 4.2rem;
+    display: inline-block;
+    margin-top: 3rem;
+    width: 7rem;
+    height: .1rem;
+    border-top: 0.1rem solid #dddee3;
+    z-index: 0;
+}
+.projectForm .upBuildPic label:after {
+    content: "";
+    position: absolute;
+    top: 4.2rem;
+    left: 7.7rem;
+    display: inline-block;
+    width: .1rem;
+    height: 7rem;
+    border-left: 0.1rem solid #dddee3;
+    z-index: 0;
+}
+.projectForm .upBuildPic input {
+    visibility: hidden;
+    cursor: none;
+}
+.projectForm .upBuildPic .picWrap {
+    position: relative;
+    float: left;
+    margin: 0 2rem 2rem 0;
+    overflow: hidden;
+}
+.projectForm .upBuildPic .picWrap label {
+    float: none;
+    width: 21rem;
+    height: 21rem;
+}
+.projectForm .upBuildPic .picWrap label img {
+    width: 20.6rem;
+    height: 20.6rem;
+}
+.projectForm .upBuildPic .picWrap label:before {
+    top: 7rem;
+    left: 7rem;
+}
+.projectForm .upBuildPic .picWrap label:after {
+    top: 6.5rem;
+    left: 10.5rem;
+}
+.projectForm .upBuildPic .picWrap a {
+    position: absolute;
+    top: 17rem;
+    left: 6rem;
+    z-index: 20;
+    display: block;
+    width: 8.8rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    background: #fff;
+    border-radius: .3rem;
+    border: 0.1rem solid #ed6c00;
+    color: #ed6c00;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.projectForm .tips {
+    color: #ed6c00;
+}
+.projectForm input[type=submit] {
+    margin-bottom: 8rem;
+    width: 100%;
+    height: 5rem;
+    background: #ed6c00;
+    border-radius: .5rem;
+    color: #fff;
+    font-size: 2rem;
+}
+.projectForm .inputSubmit {
+    margin-bottom: 8rem;
+    width: 100%;
+    height: 5rem;
+    background: #ed6c00;
+    border: 0;
+    border-radius: .5rem;
+    color: #fff;
+    font-size: 2rem;
+}
+.applyFinish {
+    margin-top: 0;
+}
+.applyFinish .upBuildPic {
+    padding-top: 0;
+}
+.applyFinish .upBuildPic label {
+    float: none;
+}
+.applyFinish .upBuildPic input {
+    float: none;
+}
+/* 带表格表单 */
+.projectTableFrom {
+    background: none;
+}
+.projectTableFrom .formGroup {
+    border-bottom: 0.1rem solid #dddee3;
+    background: #fff;
+    margin: 0;
+    padding: 1.2rem 2.4rem;
+}
+.projectTableFrom .formGroup p {
+    padding-left: 8rem;
+}
+.projectTableFrom .table_list {
+    border-top: 0.1rem solid #dddee3;
+    margin-top: 2rem;
+}
+.projectTableFrom .table_list .over {
+    color: #ed6c00;
+}
+.projectTableFrom .table_list .arrange {
+    color: #0cb326;
+}
+/* 表单详情 */
+.formDetail {
+    color: #333;
+    font-size: 1.4rem;
+}
+.formDetail h3 {
+    background: #f0d7c3;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    color: #666;
+}
+.formDetail h4 {
+    padding: 1.5rem 2.5rem .5rem;
+    font-weight: 500;
+}
+.formDetail ul {
+    background: #fff;
+    border-top: 0.1rem solid #dddee3;
+    border-bottom: 0.1rem solid #dddee3;
+    padding: .8rem 0;
+}
+.formDetail ul li {
+    padding: .8rem 2.5rem;
+    overflow: hidden;
+}
+.formDetail ul.twoColumn {
+    overflow: hidden;
+}
+.formDetail ul.twoColumn li {
+    float: left;
+    width: 50%;
+}
+.formDetail ul.twoColumn li.w100 {
+    width: 100%;
+}
+.formDetail ul span {
+    display: inline-block;
+    float: left;
+    width: 6rem;
+    color: #999;
+}
+.formDetail ul p {
+    padding-left: 8rem;
+}
+.formDetail ul p img {
+    max-width: 100%;
+}
+.formDetail ul.buildPic {
+    padding: 2rem 0 .4rem 2.5rem;
+    min-height: 16rem;
+    overflow: hidden;
+}
+.formDetail ul.buildPic li {
+    float: left;
+    margin: 0 1.6rem 1.6rem 0;
+    padding: 0;
+    width: 16rem;
+    height: 16rem;
+    overflow: hidden;
+}
+.formDetail ul.buildPic img {
+    max-width: 100%;
+}
+.formDetail ul.labelLColumn span {
+    width: auto;
+    margin-right: 2rem;
+}
+.formDetail ul.labelLColumn p {
+    padding-left: 0;
+}
+/*表格头部基本信息*/
+.orderBaseInfo {
+    padding: 1rem 0 1rem 2.5rem;
+    min-height: 3rem;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    color: #666;
+    background: #f0d7c3;
+    overflow: hidden;
+}
+.orderBaseInfo ul {
+    margin-left: -6rem;
+}
+.orderBaseInfo li {
+    display: inline-block;
+    margin-left: 6rem;
+}
+.orderBaseInfo li strong {
+    font-weight: normal;
+    color: #ed6c00;
+}
+.orderBaseInfo + .table_list {
+    margin-top: 0;
+}
+/*补货申请*/
+.replenish_list {
+    margin-top: 2rem;
+}
+/*图纸详情*/
+.dwg {
+    margin-top: 2rem;
+    padding: 2rem 2rem 0;
+    border-top: 0.1rem solid #dddee3;
+    border-bottom: 0.1rem solid #dddee3;
+    color: #999;
+    text-align: center;
+    font-size: 1.4rem;
+    background: #fff;
+}
+.dwg ul {
+    margin-left: -8rem;
+    min-height: 16rem;
+    overflow: hidden;
+}
+.dwg li {
+    float: left;
+    margin: 0 0 2rem 8rem;
+    width: 16rem;
+}
+.dwg li img {
+    max-width: 100%;
+}
+.dwg p {
+    margin: 1rem 0 2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.dwg a {
+    display: inline-block;
+    width: 8.8rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    border: 0.1rem solid #ed6c00;
+    border-radius: .3rem;
+    color: #ed6c00;
+    font-size: 1.2rem;
+}
+/*签到地图*/
+.signInMap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.signInMap .signInAdd {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+.signInMap .map {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.signInMap .signInBtn {
+    position: fixed;
+    left: 50%;
+    margin-left: -20rem;
+    bottom: 1.5rem;
+    width: 40rem;
+    height: 5.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    background: #ed6c00;
+    color: #fff;
+}
+/*质检报告*/
+.qaTab {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: #333;
+}
+.qaTab ul {
+    display: table;
+    padding: 0 2.5rem;
+    width: 100%;
+    background: #f9f9f9;
+    border-top: 0.1rem solid #dddee3;
+    border: 0.1rem solid #dddee3;
+}
+.qaTab li {
+    display: table-cell;
+    padding: 1.6rem;
+    line-height: 1.8rem;
+    border-bottom-width: .2rem;
+    border-bottom-color: transparent;
+}
+.qaTab li.hover {
+    border-bottom: .2rem solid #ed6c00;
+}
+.zcheck_text li {
+    border-bottom: 0.1rem solid #dddee3;
+    background: #fff;
+}
+.zchenck_px {
+    display: table;
+    width: 100%;
+    text-align: center;
+    min-height: 7rem;
+    font-size: 1.4rem;
+    color: #666;
+}
+.zchenck_px p {
+    display: table-cell;
+    vertical-align: middle;
+}
+.zchenck_px p.zchenck_p1 {
+    width: 8%;
+}
+.zchenck_px p.zchenck_p2 {
+    width: 52%;
+}
+.zchenck_px p.zchenck_p3 {
+    width: 20%;
+}
+.zchenck_px p.zchenck_p4 {
+    width: 15%;
+    color: #ed6c00;
+}
+.zchenck_px p a.goods_zk2 {
+    display: none;
+}
+.zchenck_nr {
+    display: none;
+    padding: 2rem 2.5rem;
+    background: #f2f2f4;
+    font-size: 1.4rem;
+    border-top: 0.1rem solid #dddee3;
+}
+.zchenck_nr p {
+    padding: 0.5rem 0;
+}
+.zchenck_nr p span {
+    color: #666;
+}
+/*任务包详情*/
+.stepAndPrise .projectForm {
+    margin-top: 0;
+}
+.stepAndPrise .formGroupBox {
+    border-bottom: 0;
+}
+.stepAndPrise h5 {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+}

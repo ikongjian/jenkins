@@ -1,0 +1,14 @@
+.table_fixedWidth{	border: solid 1px #DDDDDD;	width: 100%;table-layout:fixed;border-collapse: collapse;}
+.table_fixedWidth tr:HOVER{background-color: #FFFFBB;}
+.table_fixedWidth td{	height:25px;border: solid 1px #FFAB4F;text-align: center;font-size: 11px;color:#454545;nowrap;overflow:hidden;word-break:break-all;white-space: nowrap;}
+.table_fixedWidth th{	height:27px;border: solid 1px #FFAB4F;text-align: center;font-size: 12px;;background-color: #FFAB4F;color:white;font-family: 微软雅黑}
+
+
+#title_select{width: 100%;padding-left: 10px;font-family: 微软雅黑;font-size: 14px;}
+.tdhide{display: none;}
+#title_select input{margin-left: 10px;}
+
+.table_fixedWidth input {border: solid 1px #FFAB4F;text-align: right;}
+.link{cursor: pointer;}
+
+.button_orange{border: 1px solid #ddd;background-color: #FFAB4F;color: #fff;margin: 0 0 15px;height: 28px;}

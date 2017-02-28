@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NewDataSet>
+  <info>
+      <version>2.1</version>
+      <description>检测到新版本！</description>
+      <apkurl>http://worker1.ikongjian.com/assets/app/apk/BearMaster.apk</apkurl>
+      <forceUpdate>false</forceUpdate>
+  </info>
+</NewDataSet>

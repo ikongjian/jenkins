@@ -1,0 +1,717 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ikongjian.erp</groupId>
+        <artifactId>erp</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>erp-worker</artifactId>
+    <packaging>war</packaging>
+    <name>erp-worker</name>
+    <url>http://ikongjian.com</url>
+    <dependencies>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20141113</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ikongjian.commons</groupId>
+            <artifactId>commons-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ikongjian.erp</groupId>
+            <artifactId>erp-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code</groupId>
+            <artifactId>kaptcha</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>opensymphony</groupId>
+            <artifactId>sitemesh</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>janino</artifactId>
+            <version>2.7.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>commons-compiler</artifactId>
+            <version>2.7.8</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>commons-compiler-jdk</artifactId>
+            <version>2.7.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json.simple</groupId>
+            <artifactId>json-simple</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xiaomi.push</groupId>
+            <artifactId>MiPush_SDK_Serve</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>velocity-tools</groupId>
+            <artifactId>velocity-tools</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <finalName>erp-worker</finalName>
+        <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+        <outputDirectory>${basedir}/WebRoot/WEB-INF/classes</outputDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.plugin.resources.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.plugin.compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <inherited>true</inherited>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${maven.plugin.war.version}</version>
+                <configuration>
+                    <webappDirectory>${basedir}/WebRoot</webappDirectory>
+                    <warSourceDirectory>${basedir}/WebRoot</warSourceDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.plugin.surefire.version}</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>${maven.plugin.eclipse.version}</version>
+                <configuration>
+                    <wtpversion>2.0</wtpversion>
+                    <additionalProjectnatures>
+                        <projectnature>org.springframework.ide.eclipse.core.springnature
+                        </projectnature>
+                    </additionalProjectnatures>
+                    <sourceExcludes>
+                        <sourceExclude>**/.svn/</sourceExclude>
+                    </sourceExcludes>
+                    <downloadSources>true</downloadSources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <jdbc.driverClass>com.mysql.jdbc.Driver</jdbc.driverClass>
+                <jdbc.user>root</jdbc.user>
+                <jdbc.password>root</jdbc.password>
+                <jdbc.minPoolSize>10</jdbc.minPoolSize>
+                <jdbc.maxPoolSize>100</jdbc.maxPoolSize>
+                <jdbc.maxIdleTime>1800</jdbc.maxIdleTime>
+                <jdbc.acquireIncrement>5</jdbc.acquireIncrement>
+                <jdbc.maxStatements>10</jdbc.maxStatements>
+                <jdbc.initialPoolSize>2</jdbc.initialPoolSize>
+                <jdbc.idleConnectionTestPeriod>1800</jdbc.idleConnectionTestPeriod>
+                <jdbc.acquireRetryAttempts>30</jdbc.acquireRetryAttempts>
+                <jdbc.breakAfterAcquireFailure>true</jdbc.breakAfterAcquireFailure>
+                <jdbc.testConnectionOnCheckout>false</jdbc.testConnectionOnCheckout>
+                <!-- <jdbc.url>jdbc:mysql://127.0.0.1:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true</jdbc.url> -->
+
+                <!-- 主库 -->
+                <master.jdbc.user>btc_user</master.jdbc.user>
+                <master.jdbc.password>PpEZqboiBp</master.jdbc.password>
+                <master.jdbc.url>jdbc:mysql://127.0.0.1:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</master.jdbc.url>
+                <!-- 从库 只读 -->
+                <slave.jdbc.user>btc_user</slave.jdbc.user>
+                <slave.jdbc.password>PpEZqboiBp</slave.jdbc.password>
+                <slave.jdbc.url>jdbc:mysql://127.0.0.1:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</slave.jdbc.url>
+
+                <redis.pool.maxTotal>50</redis.pool.maxTotal>
+                <redis.pool.maxIdle>8</redis.pool.maxIdle>
+                <redis.pool.maxWaitMillis>-1</redis.pool.maxWaitMillis>
+                <redis.pool.testOnBorrow>true</redis.pool.testOnBorrow>
+                <redis.pool.testOnReturn>true</redis.pool.testOnReturn>
+                <redis.timeout>2000</redis.timeout>
+                <redis.host>127.0.0.1</redis.host>
+                <redis.port>6379</redis.port>
+                <log.level>debug</log.level>
+                <redis.pool.maxActive>50</redis.pool.maxActive>
+                <redis.pool.maxWait>-1</redis.pool.maxWait>
+
+                <erp.storage.mail.to>huql@ikongjian.com;libingbing1100@126.com</erp.storage.mail.to>
+                <erp.storage.mail.cc></erp.storage.mail.cc>
+                <erp.storage.file.basedir>/var/excel/storage/result/</erp.storage.file.basedir>
+
+
+                <erp.exception.smtpHost>smtp.exmail.qq.com</erp.exception.smtpHost>
+                <erp.exception.smtpPort>465</erp.exception.smtpPort>
+                <erp.exception.username>yunying2</erp.exception.username>
+                <erp.exception.password>space1234567</erp.exception.password>
+                <erp.exception.ssl>true</erp.exception.ssl>
+                <erp.exception.to>huqilong@126.com</erp.exception.to>
+                <erp.exception.from>yunying2@ikongjian.com</erp.exception.from>
+                <erp.exception.subject>开发环境系统异常报警</erp.exception.subject>
+
+                <www.interface.host>http://interface.ikongjian.com</www.interface.host>
+                <www.interface.port>80</www.interface.port>
+                <!-- 熊师傅竣工图片地址 -->
+                <img.upload.complete.dir>/data/img/worker/</img.upload.complete.dir>
+                <img.upload.quality.check.dir>/data/gfs/img/</img.upload.quality.check.dir>
+                <!-- 熊师傅排工上传图片 -->
+                <img.upload.base.dir>/data/img/</img.upload.base.dir>
+                <img.domain.name>http://img-test.ikongjian.com</img.domain.name>
+
+                <!-- kenan 熊师傅app下载jar包 -->
+                <app.download>http://m.test6.ikongjian.com</app.download>
+
+                <img.task.photo.num>6</img.task.photo.num>
+                <!-- 熊师傅工人维护图片上传 -->
+                <img.domain>http://imgbeta.ikongjian.com</img.domain>
+                <member.img.basedir>/data/img/worker/header</member.img.basedir>
+
+                <!-- 短信发送标志 true：发送，其他不发送 -->
+                <send.msg.flag>false</send.msg.flag>
+                <!-- wap 接口url -->
+                <wap.url>http://192.168.70.20</wap.url>
+                <easpwd.userName>user</easpwd.userName>
+                <easpwd.password>000000</easpwd.password>
+                <easpwd.code>I01</easpwd.code>
+                <easpwd.lg></easpwd.lg>
+                <easpwd.url></easpwd.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <jdbc.driverClass>com.mysql.jdbc.Driver</jdbc.driverClass>
+                <jdbc.user>btc_user</jdbc.user>
+                <jdbc.password>PpEZqboiBp</jdbc.password>
+                <jdbc.minPoolSize>10</jdbc.minPoolSize>
+                <jdbc.maxPoolSize>100</jdbc.maxPoolSize>
+                <jdbc.maxIdleTime>1800</jdbc.maxIdleTime>
+                <jdbc.acquireIncrement>5</jdbc.acquireIncrement>
+                <jdbc.maxStatements>10</jdbc.maxStatements>
+                <jdbc.initialPoolSize>2</jdbc.initialPoolSize>
+                <jdbc.idleConnectionTestPeriod>1800</jdbc.idleConnectionTestPeriod>
+                <jdbc.acquireRetryAttempts>30</jdbc.acquireRetryAttempts>
+                <jdbc.breakAfterAcquireFailure>true</jdbc.breakAfterAcquireFailure>
+                <jdbc.testConnectionOnCheckout>false</jdbc.testConnectionOnCheckout>
+                <!-- <jdbc.url>jdbc:mysql://192.168.70.20:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true</jdbc.url> -->
+
+                <!-- 主库 -->
+                <master.jdbc.user>btc_user</master.jdbc.user>
+                <master.jdbc.password>PpEZqboiBp</master.jdbc.password>
+                <master.jdbc.url>jdbc:mysql://192.168.70.20:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</master.jdbc.url>
+                <!-- 从库 只读 -->
+                <slave.jdbc.user>btc_user</slave.jdbc.user>
+                <slave.jdbc.password>PpEZqboiBp</slave.jdbc.password>
+                <slave.jdbc.url>jdbc:mysql://192.168.70.20:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</slave.jdbc.url>
+
+                <redis.pool.maxTotal>50</redis.pool.maxTotal>
+                <redis.pool.maxIdle>8</redis.pool.maxIdle>
+                <redis.pool.maxWaitMillis>-1</redis.pool.maxWaitMillis>
+                <redis.pool.testOnBorrow>true</redis.pool.testOnBorrow>
+                <redis.pool.testOnReturn>true</redis.pool.testOnReturn>
+                <redis.timeout>2000</redis.timeout>
+                <redis.host>192.168.70.20</redis.host>
+                <redis.port>6379</redis.port>
+                <log.level>debug</log.level>
+                <redis.pool.maxActive>50</redis.pool.maxActive>
+                <redis.pool.maxWait>-1</redis.pool.maxWait>
+
+                <erp.storage.mail.to>huql@ikongjian.com;libingbing1100@126.com</erp.storage.mail.to>
+                <erp.storage.mail.cc></erp.storage.mail.cc>
+                <erp.storage.file.basedir>/var/excel/storage/result/</erp.storage.file.basedir>
+
+
+                <!-- <erp.exception.smtpHost>smtp.exmail.qq.com</erp.exception.smtpHost>
+                <erp.exception.smtpPort>465</erp.exception.smtpPort>
+                <erp.exception.username>yunying2</erp.exception.username>
+                <erp.exception.password>space1234567</erp.exception.password>
+                <erp.exception.ssl>true</erp.exception.ssl>
+                <erp.exception.to>huqilong@126.com</erp.exception.to>
+                <erp.exception.from>yunying2@ikongjian.com</erp.exception.from>
+                <erp.exception.subject>开发环境系统异常报警</erp.exception.subject> -->
+                <erp.exception.smtpHost>smtp.163.com</erp.exception.smtpHost>
+                <erp.exception.smtpPort>25</erp.exception.smtpPort>
+                <erp.exception.username>mustloveyou</erp.exception.username>
+                <erp.exception.password>mustloveyou8538</erp.exception.password>
+                <erp.exception.ssl>false</erp.exception.ssl>
+                <erp.exception.to>test@ikongjian.com</erp.exception.to>
+                <erp.exception.from>mustloveyou@163.com</erp.exception.from>
+                <erp.exception.subject>系统异常报警(dev)</erp.exception.subject>
+
+                <www.interface.host>http://interface.ikongjian.com</www.interface.host>
+                <www.interface.port>80</www.interface.port>
+                <!-- 熊师傅竣工图片地址 -->
+                <img.upload.complete.dir>/data/img/worker/</img.upload.complete.dir>
+                <!-- 质检图片 -->
+                <img.upload.quality.check.dir>/data/gfs/img/</img.upload.quality.check.dir>
+                <!-- 熊师傅排工上传图片 -->
+                <img.upload.base.dir>/data/img/</img.upload.base.dir>
+                <img.domain.name>http://img-test.ikongjian.com</img.domain.name>
+
+                <!-- kenan 熊师傅app下载jar包 -->
+                <app.download>http://m.test6.ikongjian.com</app.download>
+
+                <img.task.photo.num>6</img.task.photo.num>
+                <!-- 熊师傅工人维护图片上传 -->
+                <img.domain>http://imgbeta.ikongjian.com</img.domain>
+                <member.img.basedir>/data/img/worker/header</member.img.basedir>
+                <!-- 短信发送标志 true：发送，其他不发送 -->
+                <send.msg.flag>false</send.msg.flag>
+                <!-- wap 接口url -->
+                <wap.url>http://192.168.70.20</wap.url>
+                <easpwd.userName>user</easpwd.userName>
+                <easpwd.password>000000</easpwd.password>
+                <easpwd.code>I01</easpwd.code>
+                <easpwd.lg></easpwd.lg>
+                <easpwd.url></easpwd.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <jdbc.driverClass>com.mysql.jdbc.Driver</jdbc.driverClass>
+                <jdbc.user>btc_user</jdbc.user>
+                <jdbc.password>PpEZqboiBp</jdbc.password>
+                <jdbc.minPoolSize>5</jdbc.minPoolSize>
+                <jdbc.maxPoolSize>10</jdbc.maxPoolSize>
+                <jdbc.maxIdleTime>1800</jdbc.maxIdleTime>
+                <jdbc.acquireIncrement>5</jdbc.acquireIncrement>
+                <jdbc.maxStatements>20</jdbc.maxStatements>
+                <jdbc.initialPoolSize>2</jdbc.initialPoolSize>
+                <jdbc.idleConnectionTestPeriod>1800</jdbc.idleConnectionTestPeriod>
+                <jdbc.acquireRetryAttempts>30</jdbc.acquireRetryAttempts>
+                <jdbc.breakAfterAcquireFailure>true</jdbc.breakAfterAcquireFailure>
+                <jdbc.testConnectionOnCheckout>false</jdbc.testConnectionOnCheckout>
+                <!-- <jdbc.url>jdbc:mysql://192.168.70.20:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true</jdbc.url> -->
+
+                <!-- 主库 -->
+                <master.jdbc.user>btc_user</master.jdbc.user>
+                <master.jdbc.password>PpEZqboiBp</master.jdbc.password>
+                <master.jdbc.url>jdbc:mysql://192.168.70.20:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</master.jdbc.url>
+                <!-- 从库 只读 -->
+                <slave.jdbc.user>btc_user</slave.jdbc.user>
+                <slave.jdbc.password>PpEZqboiBp</slave.jdbc.password>
+                <slave.jdbc.url>jdbc:mysql://192.168.70.20:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</slave.jdbc.url>
+
+                <redis.pool.maxTotal>50</redis.pool.maxTotal>
+                <redis.pool.maxIdle>8</redis.pool.maxIdle>
+                <redis.pool.maxWaitMillis>-1</redis.pool.maxWaitMillis>
+                <redis.pool.testOnBorrow>true</redis.pool.testOnBorrow>
+                <redis.pool.testOnReturn>true</redis.pool.testOnReturn>
+                <redis.timeout>2000</redis.timeout>
+                <redis.host>192.168.70.20</redis.host>
+                <redis.port>6379</redis.port>
+                <log.level>debug</log.level>
+                <redis.pool.maxActive>50</redis.pool.maxActive>
+                <redis.pool.maxWait>-1</redis.pool.maxWait>
+
+                <erp.storage.mail.to>huql@ikongjian.com</erp.storage.mail.to>
+                <erp.storage.mail.cc>huql@ikongjian.com</erp.storage.mail.cc>
+                <erp.storage.file.basedir>/var/excel/storge/test/result/</erp.storage.file.basedir>
+
+                <erp.exception.smtpHost>smtp.163.com</erp.exception.smtpHost>
+                <erp.exception.smtpPort>25</erp.exception.smtpPort>
+                <erp.exception.username>mustloveyou</erp.exception.username>
+                <erp.exception.password>mustloveyou8538</erp.exception.password>
+                <erp.exception.ssl>false</erp.exception.ssl>
+                <erp.exception.to>test@ikongjian.com</erp.exception.to>
+                <erp.exception.from>mustloveyou@163.com</erp.exception.from>
+                <erp.exception.subject>系统异常报警(test)</erp.exception.subject>
+
+                <www.interface.host>http://interface.ikongjian.com</www.interface.host>
+                <www.interface.port>80</www.interface.port>
+                <!-- 熊师傅竣工图片地址 -->
+                <img.upload.complete.dir>/data/img/worker/</img.upload.complete.dir>
+                <!-- 质检图片 -->
+                <img.upload.quality.check.dir>/data/gfs/img/</img.upload.quality.check.dir>
+                <!-- 熊师傅排工图片上传 -->
+                <img.upload.base.dir>/data/img/</img.upload.base.dir>
+                <img.domain.name>http://img-test.ikongjian.com</img.domain.name>
+
+                <!-- kenan 熊师傅app下载jar包 -->
+                <app.download>http://m.test6.ikongjian.com</app.download>
+
+                <img.task.photo.num>6</img.task.photo.num>
+                <!-- 熊师傅工人维护图片上传 -->
+                <img.domain>http://img-test.ikongjian.com</img.domain>
+                <member.img.basedir>/data/img/worker/header</member.img.basedir>
+                <!-- 短信发送标志 true：发送，其他不发送 -->
+                <send.msg.flag>false</send.msg.flag>
+                <!-- wap 接口url -->
+                <wap.url>http://192.168.70.20</wap.url>
+                <easpwd.userName>user</easpwd.userName>
+                <easpwd.password>000000</easpwd.password>
+                <easpwd.code>I01</easpwd.code>
+                <easpwd.lg></easpwd.lg>
+                <easpwd.url></easpwd.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>beta</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <jdbc.driverClass>com.mysql.jdbc.Driver</jdbc.driverClass>
+                <jdbc.user>btc_user</jdbc.user>
+                <jdbc.password>PpEZqboiBp</jdbc.password>
+                <jdbc.minPoolSize>5</jdbc.minPoolSize>
+                <jdbc.maxPoolSize>10</jdbc.maxPoolSize>
+                <jdbc.maxIdleTime>1800</jdbc.maxIdleTime>
+                <jdbc.acquireIncrement>5</jdbc.acquireIncrement>
+                <jdbc.maxStatements>20</jdbc.maxStatements>
+                <jdbc.initialPoolSize>2</jdbc.initialPoolSize>
+                <jdbc.idleConnectionTestPeriod>1800</jdbc.idleConnectionTestPeriod>
+                <jdbc.acquireRetryAttempts>30</jdbc.acquireRetryAttempts>
+                <jdbc.breakAfterAcquireFailure>true</jdbc.breakAfterAcquireFailure>
+                <jdbc.testConnectionOnCheckout>false</jdbc.testConnectionOnCheckout>
+                <!-- <jdbc.url>jdbc:mysql://127.0.0.1:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true</jdbc.url> -->
+
+                <!-- 主库 -->
+                <master.jdbc.user>btc_user</master.jdbc.user>
+                <master.jdbc.password>PpEZqboiBp</master.jdbc.password>
+                <master.jdbc.url>jdbc:mysql://127.0.0.1:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</master.jdbc.url>
+                <!-- 从库 只读 -->
+                <slave.jdbc.user>btc_user</slave.jdbc.user>
+                <slave.jdbc.password>PpEZqboiBp</slave.jdbc.password>
+                <slave.jdbc.url>jdbc:mysql://127.0.0.1:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</slave.jdbc.url>
+
+
+                <redis.pool.maxTotal>50</redis.pool.maxTotal>
+                <redis.pool.maxIdle>8</redis.pool.maxIdle>
+                <redis.pool.maxWaitMillis>-1</redis.pool.maxWaitMillis>
+                <redis.pool.testOnBorrow>true</redis.pool.testOnBorrow>
+                <redis.pool.testOnReturn>true</redis.pool.testOnReturn>
+                <redis.timeout>2000</redis.timeout>
+                <redis.host>127.0.0.1</redis.host>
+                <redis.port>6378</redis.port>
+                <log.level>info</log.level>
+                <redis.pool.maxActive>50</redis.pool.maxActive>
+                <redis.pool.maxWait>-1</redis.pool.maxWait>
+
+                <erp.storage.mail.to>huql@ikongjian.com</erp.storage.mail.to>
+                <erp.storage.mail.cc>huql@ikongjian.com</erp.storage.mail.cc>
+                <erp.storage.file.basedir>/var/excel/storge/beta/result/</erp.storage.file.basedir>
+
+                <erp.exception.smtpHost>smtp.163.com</erp.exception.smtpHost>
+                <erp.exception.smtpPort>25</erp.exception.smtpPort>
+                <erp.exception.username>mustloveyou</erp.exception.username>
+                <erp.exception.password>mustloveyou8538</erp.exception.password>
+                <erp.exception.ssl>false</erp.exception.ssl>
+                <erp.exception.to>test@ikongjian.com</erp.exception.to>
+                <erp.exception.from>mustloveyou@163.com</erp.exception.from>
+                <erp.exception.subject>系统异常报警(beta)</erp.exception.subject>
+
+
+                <www.interface.host>http://interface.ikongjian.com</www.interface.host>
+                <www.interface.port>80</www.interface.port>
+                <!-- 熊师傅竣工图片地址 -->
+                <img.upload.complete.dir>/data/gfs/img/worker/</img.upload.complete.dir>
+                <!-- 质检图片 -->
+                <img.upload.quality.check.dir>/data/gfs/img/</img.upload.quality.check.dir>
+                <!-- 熊师傅排工图片上传 -->
+                <img.upload.base.dir>/data/gfs/img/</img.upload.base.dir>
+                <img.domain.name>http://imgbeta.ikongjian.com</img.domain.name>
+
+                <!-- kenan 熊师傅app下载jar包 -->
+                <app.download>http://m.test6.ikongjian.com</app.download>
+
+                <img.task.photo.num>6</img.task.photo.num>
+                <!-- 熊师傅工人维护图片上传 -->
+                <img.domain>http://imgbeta.ikongjian.com</img.domain>
+                <member.img.basedir>/data/img/worker/header</member.img.basedir>
+                <!-- 短信发送标志 true：发送，其他不发送 -->
+                <send.msg.flag>false</send.msg.flag>
+                <!-- wap 接口url -->
+                <wap.url>http://mbeta.ikongjian.com</wap.url>
+                <easpwd.userName>user</easpwd.userName>
+                <easpwd.password>000000</easpwd.password>
+                <easpwd.code>I01</easpwd.code>
+                <easpwd.lg></easpwd.lg>
+                <easpwd.url></easpwd.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>release</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <jdbc.driverClass>com.mysql.jdbc.Driver</jdbc.driverClass>
+                <jdbc.user>btc_user</jdbc.user>
+                <jdbc.password>ikongjian*()</jdbc.password>
+                <jdbc.minPoolSize>10</jdbc.minPoolSize>
+                <jdbc.maxPoolSize>60</jdbc.maxPoolSize>
+                <jdbc.maxIdleTime>1800</jdbc.maxIdleTime>
+                <jdbc.acquireIncrement>5</jdbc.acquireIncrement>
+                <jdbc.maxStatements>200</jdbc.maxStatements>
+                <jdbc.initialPoolSize>10</jdbc.initialPoolSize>
+                <jdbc.idleConnectionTestPeriod>1800</jdbc.idleConnectionTestPeriod>
+                <jdbc.acquireRetryAttempts>30</jdbc.acquireRetryAttempts>
+                <jdbc.breakAfterAcquireFailure>false</jdbc.breakAfterAcquireFailure>
+                <jdbc.testConnectionOnCheckout>false</jdbc.testConnectionOnCheckout>
+                <!-- <jdbc.url>jdbc:mysql://db-master.ikongjian.com:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true</jdbc.url> -->
+                <!-- 主库 -->
+                <master.jdbc.user>btc_user</master.jdbc.user>
+                <master.jdbc.password>ikongjian*()</master.jdbc.password>
+                <master.jdbc.url>jdbc:mysql://db-master.ikongjian.com:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</master.jdbc.url>
+                <!-- 从库 只读 -->
+                <slave.jdbc.user>btc_user</slave.jdbc.user>
+                <slave.jdbc.password>ikongjian*()</slave.jdbc.password>
+                <slave.jdbc.url>jdbc:mysql://db-read.ikongjian.com:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</slave.jdbc.url>
+
+                <redis.pool.maxTotal>1000</redis.pool.maxTotal>
+                <redis.pool.maxIdle>8</redis.pool.maxIdle>
+                <redis.pool.maxWaitMillis>-1</redis.pool.maxWaitMillis>
+                <redis.pool.testOnBorrow>true</redis.pool.testOnBorrow>
+                <redis.pool.testOnReturn>true</redis.pool.testOnReturn>
+                <redis.timeout>2000</redis.timeout>
+                <redis.host>127.0.0.1</redis.host>
+                <redis.port>6379</redis.port>
+
+                <memcached.pool.servers>127.0.0.1:12000</memcached.pool.servers>
+                <memcached.pool.initConn>20</memcached.pool.initConn>
+                <memcached.pool.minConn>10</memcached.pool.minConn>
+                <memcached.pool.maxConn>100</memcached.pool.maxConn>
+                <memcached.pool.maintSleep>3000</memcached.pool.maintSleep>
+                <memcached.pool.nagle>false</memcached.pool.nagle>
+                <memcached.pool.socketTO>3000</memcached.pool.socketTO>
+                <log.level>info</log.level>
+
+                <erp.storage.mail.to>xinyh@ikongjian.com;juwl@ikongjian.com;fengjuan@ikongjian.com;fengjw@ikongjian.com;lianhg@ikongjian.com;wanglei@ikongjian.com;liujb@ikongjian.com;liping@ikongjian.com;liuzheng@ikongjian.com</erp.storage.mail.to>
+                <erp.storage.mail.cc>liuzheng@ikongjian.com;liping@ikongjian.com;liujb@ikongjian.com;wangch@ikongjian.com;huxb@ikongjian.com;huql@ikongjian.com</erp.storage.mail.cc>
+                <erp.storage.file.basedir>/data/excel/storge/result</erp.storage.file.basedir>
+
+                <erp.exception.smtpHost>smtp.163.com</erp.exception.smtpHost>
+                <erp.exception.smtpPort>25</erp.exception.smtpPort>
+                <erp.exception.username>mustloveyou</erp.exception.username>
+                <erp.exception.password>mustloveyou8538</erp.exception.password>
+                <erp.exception.ssl>false</erp.exception.ssl>
+                <erp.exception.to>liwm@ikongjian.com</erp.exception.to>
+                <erp.exception.from>mustloveyou@163.com</erp.exception.from>
+                <erp.exception.subject>系统异常报警(生产)</erp.exception.subject>
+
+                <www.interface.host>http://interface.ikongjian.com</www.interface.host>
+                <www.interface.port>80</www.interface.port>
+
+                <!-- 熊师傅竣工图片地址 -->
+                <img.upload.complete.dir>/data/gfs/img/worker/</img.upload.complete.dir>
+                <!-- 质检图片 -->
+                <img.upload.quality.check.dir>/data/gfs/img/</img.upload.quality.check.dir>
+                <!-- 熊师傅排工图片上传 -->
+                <img.upload.base.dir>/data/gfs/img/</img.upload.base.dir>
+                <img.domain>http://img.ikongjian.com</img.domain>
+                <img.domain.name>http://img.ikongjian.com</img.domain.name>
+
+                <!-- kenan 熊师傅app下载jar包 -->
+                <app.download>http://m.ikongjian.com/</app.download>
+
+                <img.task.photo.num>6</img.task.photo.num>
+                <!-- 熊师傅工人维护图片上传 -->
+                <member.img.basedir>/data/img/worker/header</member.img.basedir>
+                <!-- 短信发送标志 true：发送，其他不发送 -->
+                <send.msg.flag>true</send.msg.flag>
+                <!-- wap 接口url -->
+                <wap.url>http://m.ikongjian.com</wap.url>
+                <easpwd.userName>user1</easpwd.userName>
+                <easpwd.password>654123</easpwd.password>
+                <easpwd.code>A01</easpwd.code>
+                <easpwd.lg>http://eas.ikongjian.com:6888/ormrpc/services/EASLogin</easpwd.lg>
+                <easpwd.url>http://eas.ikongjian.com:6888/ormrpc/services/WSMIDFacade</easpwd.url>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>inner-test</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <jdbc.driverClass>com.mysql.jdbc.Driver</jdbc.driverClass>
+                <jdbc.user>btc_user</jdbc.user>
+                <jdbc.password>PpEZqboiBp</jdbc.password>
+                <jdbc.minPoolSize>10</jdbc.minPoolSize>
+                <jdbc.maxPoolSize>60</jdbc.maxPoolSize>
+                <jdbc.maxIdleTime>1800</jdbc.maxIdleTime>
+                <jdbc.acquireIncrement>5</jdbc.acquireIncrement>
+                <jdbc.maxStatements>200</jdbc.maxStatements>
+                <jdbc.initialPoolSize>10</jdbc.initialPoolSize>
+                <jdbc.idleConnectionTestPeriod>1800</jdbc.idleConnectionTestPeriod>
+                <jdbc.acquireRetryAttempts>30</jdbc.acquireRetryAttempts>
+                <jdbc.breakAfterAcquireFailure>false</jdbc.breakAfterAcquireFailure>
+                <jdbc.testConnectionOnCheckout>false</jdbc.testConnectionOnCheckout>
+                <!-- 主库 -->
+                <master.jdbc.user>btc_user</master.jdbc.user>
+                <master.jdbc.password>PpEZqboiBp</master.jdbc.password>
+                <master.jdbc.url>jdbc:mysql://10.251.213.132:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</master.jdbc.url>
+                <!-- 从库 只读 -->
+                <slave.jdbc.user>btc_user</slave.jdbc.user>
+                <slave.jdbc.password>PpEZqboiBp</slave.jdbc.password>
+                <slave.jdbc.url>jdbc:mysql://10.251.213.132:3306/erp?useUnicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true&amp;useOldAliasMetadataBehavior=true</slave.jdbc.url>
+
+                <redis.pool.maxTotal>50</redis.pool.maxTotal>
+                <redis.pool.maxIdle>8</redis.pool.maxIdle>
+                <redis.pool.maxWaitMillis>-1</redis.pool.maxWaitMillis>
+                <redis.pool.testOnBorrow>true</redis.pool.testOnBorrow>
+                <redis.pool.testOnReturn>true</redis.pool.testOnReturn>
+                <redis.timeout>2000</redis.timeout>
+                <redis.host>10.251.213.132</redis.host>
+                <redis.port>6378</redis.port>
+                <log.level>info</log.level>
+                <redis.pool.maxActive>50</redis.pool.maxActive>
+                <redis.pool.maxWait>-1</redis.pool.maxWait>
+
+                <erp.storage.mail.to>huql@ikongjian.com</erp.storage.mail.to>
+                <erp.storage.mail.cc>huql@ikongjian.com</erp.storage.mail.cc>
+                <erp.storage.file.basedir>/var/excel/storge/test/result/</erp.storage.file.basedir>
+
+                <erp.exception.smtpHost>smtp.exmail.qq.com</erp.exception.smtpHost>
+                <erp.exception.smtpPort>465</erp.exception.smtpPort>
+                <erp.exception.username>yunying2</erp.exception.username>
+                <erp.exception.password>space1234567</erp.exception.password>
+                <erp.exception.ssl>true</erp.exception.ssl>
+                <erp.exception.to>huqilong@126.com</erp.exception.to>
+                <erp.exception.from>yunying2@ikongjian.com</erp.exception.from>
+                <erp.exception.subject>系统异常报警(tworker)</erp.exception.subject>
+
+                <www.interface.host>http://interface.ikongjian.com</www.interface.host>
+                <www.interface.port>80</www.interface.port>
+                <!-- 熊师傅竣工图片地址 -->
+                <img.upload.complete.dir>/data/gfs/img/worker/</img.upload.complete.dir>
+                <!-- 质检图片 -->
+                <img.upload.quality.check.dir>/data/gfs/img/</img.upload.quality.check.dir>
+                <!-- 熊师傅排工图片上传 -->
+                <img.upload.base.dir>/data/gfs/img/</img.upload.base.dir>
+                <img.domain.name>http://timg.ikongjian.com</img.domain.name>
+
+                <!-- kenan 熊师傅app下载jar包 -->
+                <app.download>http://m.test6.ikongjian.com/</app.download>
+
+                <img.task.photo.num>6</img.task.photo.num>
+                <!-- 熊师傅工人维护图片上传 -->
+                <img.domain>http://timg.ikongjian.com</img.domain>
+                <member.img.basedir>/data/img/worker/header</member.img.basedir>
+                <!-- 短信发送标志 true：发送，其他不发送 -->
+                <send.msg.flag>false</send.msg.flag>
+                <!-- wap 接口url -->
+                <wap.url>http://192.168.70.20</wap.url>
+                <!--<easpwd.userName>user1</easpwd.userName>-->
+                <!--<easpwd.password>654123</easpwd.password>-->
+                <!--<easpwd.code>A01</easpwd.code>-->
+                <!--<easpwd.lg>http://eas.ikongjian.com:6888/ormrpc/services/EASLogin</easpwd.lg>-->
+                <!--<easpwd.url>http://eas.ikongjian.com:6888/ormrpc/services/WSMIDFacade</easpwd.url>-->
+                <easpwd.userName>user</easpwd.userName>
+                <easpwd.password>000000</easpwd.password>
+                <easpwd.code>I01</easpwd.code>
+                <easpwd.lg></easpwd.lg>
+                <easpwd.url></easpwd.url>
+
+            </properties>
+        </profile>
+    </profiles>
+
+
+
+</project>

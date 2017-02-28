@@ -1,0 +1,9 @@
+<div>
+#foreach($i in $list)
+ <li>${i}</li>	
+#end
+
+#if(${flag})
+ true
+#end
+</div>

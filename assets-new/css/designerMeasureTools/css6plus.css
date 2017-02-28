@@ -1,0 +1,13 @@
+@charset "utf-8";
+/*登陆*/
+.land i{ margin-top:15%; width:108px; height:108px;}
+/*人员列表*/
+.people p img{margin:4px auto 4px;}
+/*人员详情*/
+.touxiang{ margin:5% auto 3%; width:108px; height:108px;}
+/*测量工具*/
+.clgj_esc b{width:22%;}
+.clgj_esc strong{width:78%;}
+.clgj_an li{ height:106px; margin-bottom:15px;}
+.clgj_nr li .clgj_tx input.input1{ width:15.3%; }
+.clgj_nr li .clgj_tx span.kt_text{ width:20%;}

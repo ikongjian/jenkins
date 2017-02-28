@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*头部*/
+header .name{ width:32%}
+header .title{ width:49%;}
+header .top_an{ width:19%;}
+/*登录页面*/
+.denglu_h1 img{ padding-top:220px;}
+/*导航页*/
+.nav_tab{ padding-top:30px;}
+.nav_url{ margin-bottom:100px;}
+.nav_url li{ width:33.33%;}
+/*内容框架*/
+.content{ min-height:964px;}
+/*看照片*/
+.Photo_content li{ margin:0 0 50px 77px; width:281px;}
+/*进度通报详情页面*/
+.bulletinxq_content p{ width:82%;}
+.bulletinxq_an a{ width:199px;}
+.bulletinxq_an b{ width:199px; padding-left:0; text-align:center; background:#c3c3c3; }
+/*验收反馈详情*/
+.checkxq_content p{ width:50%;}
+.checkxq_content table td a{ width:65px;}
+
+
+
+
+/*问题填报 - 安装弹窗*/
+.anzhuang{ width:80%;}

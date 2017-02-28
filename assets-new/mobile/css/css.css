@@ -1,0 +1,51 @@
+@charset "utf-8";
+html{font-size: 62.5%;width: 100%;height: 100%;font-family: "微软雅黑"}
+body {width:100%;max-width:640px;min-width:320px;margin:0px auto;font-family:"微软雅黑";padding:0px; background:#f5f5f5; font-size: 1.4rem;}
+@media screen and (min-width:320px) and (max-width:350px){ html{font-size: 87.5%;}}
+@media screen and (min-width:351px) and (max-width:381px){ html{font-size:87.5%;}}
+@media screen and (min-width:382px) and (max-width:482px) { html{font-size: 96%;}}
+@media screen and (min-width:500px){  html{font-size: 93.8%;}}
+ul,li,h1,h2,h3,h4,h5,h6,h7,p,input,select,textarea{margin:0px;padding:0px;list-style-type: none;}
+a{text-decoration:none;}
+img{ border:0;}
+/*去掉苹果设备input_CSS样式*/
+button,input{ -webkit-tap-highlight-color: rgba(255,255,255,.0); -webkit-user-modify: read-write-plaintext-only;out-line:none;}
+input[type="button"], input[type="submit"], input[type="reset"], input[type="date"] {-webkit-appearance: none;}
+select{-webkit-appearance: none }
+textarea {  -webkit-appearance: none;} 
+/*盒子模型*/
+*,*:before,*:after { -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;} 
+
+/*头部*/
+header{ height:2.75rem; position:relative; text-align:center; line-height:2.75rem; font-size:1.063rem; color:#3b3b3b; background:#fff;}
+header a{ position:absolute; top:0.875rem; left:0.625rem; width:0.5rem; height:1rem; display:block;}
+header a img{ width:100%; height:100%; float:left;}
+
+/*播报列表*/
+.list_broadcast{ padding-bottom:0.75rem;}
+.list_broadcast table{ width:100%; font-weight:normal; font-size:0.93rem; margin-bottom:0.93rem; background:#fff; border-top:1px solid #ddd;}
+.list_broadcast table tbody{ margin-bottom:3px;}
+.list_broadcast table tr{ height:2.3rem; color:#3b3b3b;}
+.list_broadcast table th{ font-weight:normal; border-right:1px solid #ddd; border-bottom:1px solid #ddd; width:7.7rem; padding:0.4rem 0;}
+.list_broadcast table td{ border-right:1px solid #ddd; border-bottom:1px solid #ddd; padding:0.4rem 0.8rem;}
+.list_broadcast table th a.list_an{ border:1px solid #ff4a00; color:#ff4a00; text-align:center; display:block; width:8.1rem; margin:0 auto; height:2.1rem; line-height:2.1rem; font-size:0.93rem;}
+
+/*早晚播报*/
+.broadcast{ border-top:1px solid #ddd; background:#fff; overflow:hidden;}
+.broadcast p{ line-height:2.6rem; margin-bottom:0.875rem; font-size:0.93rem; color:#626262; overflow:hidden;}
+.broadcast p.broadcast_night{ display:none;}
+.broadcast p span{ float:left; display:block; width:25%; text-align:right; margin-right:1%;}
+.broadcast p b{ float:left; font-weight:normal; color:#1c1c1c; display:block; width:71%; border:1px solid #fff; border-top:none; border-bottom:none;}
+.broadcast p b span{ width:6.05rem; float:left; text-align:center; margin:0 1.98rem 0 0;}
+.broadcast p b i{ width:6.05rem; display:block; height:5.7rem; overflow:hidden;}
+.broadcast p b i img{ width:100%; height:100%;}
+.broadcast p b a{ display:block; text-align:center; width:4rem; height:1.572rem; line-height:1.572rem; border:1px solid #ff4a00; margin:0.75rem auto; color:#ff4a00;}
+.broadcast p label{ color:#1c1c1c; display:block; float:left; position:relative; background:url(../img/x_1.png) no-repeat left center/0.93rem; padding-left:1.3rem; margin-right:0.875rem;}
+.broadcast p label.label_hover{ background:url(../img/x_2.png) no-repeat left center/0.93rem;}
+.broadcast p label input{ position:absolute; top:-1rem; width:0.93rem; height:0.93rem; font-family:"微软雅黑";color:#1c1c1c;}
+.broadcast p input{ float:left; font-weight:normal; color:#1c1c1c; display:block; width:71%; border:1px solid #ddd; height:2.58rem; line-height:2.58rem; padding: 0 0.5rem;}
+.broadcast p input.input_date{ background:url(../img/date.png) no-repeat 95% center/1.438rem;}
+.broadcast p input.input_file{ display:none;}
+.broadcast p textarea{ float:left; font-weight:normal; color:#1c1c1c; display:block; width:71%; border:1px solid #ddd; height:2.58rem; padding:0.5rem;resize: none; height:7.5rem; font-family:"微软雅黑"; color:#1c1c1c;}
+.broadcast p textarea.textarea_height{ height:5.429rem;}
+.broadcast_an{ border:none; background:#ff4a00; width:86.3%; height:2.572rem; margin:1.5rem auto 2.857rem; display:block; color:#fff; font-family:"微软雅黑"; font-size:0.93rem;}

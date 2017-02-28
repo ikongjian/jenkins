@@ -1,0 +1,98 @@
+@charset "utf-8";
+*, *:before, *:after {margin: 0;padding: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+html{font-size: 62.5%;width: 100%;height: 100%;font-family: "微软雅黑"}
+body {width:100%; height: 100%; max-width:640px;min-width:320px;margin:0px auto;font-family:"微软雅黑";padding:0px; background:#f1f1f1; font-size: 1rem;}
+@media screen and (min-width:320px) and (max-width:350px){ html{font-size: 62.5%;}}
+@media screen and (min-width:351px) and (max-width:381px){ html{font-size:87.5%;}}
+@media screen and (min-width:382px) and (max-width:482px) { html{font-size: 96%;}}
+@media screen and (min-width:500px){  html{font-size: 93.8%;}}
+header,ul,li,h1,h2,h3,h4,h5,h6,h7,p,form,input,table,label,select,textarea,iframe{margin:0px;padding:0px;list-style-type: none;}
+a{text-decoration:none;}
+img{ border:0;}
+
+/*去掉苹果设备input_CSS样式*/
+input[type="button"], input[type="submit"], input[type="reset"], input[type="date"] {-webkit-appearance: none; }
+select{-webkit-appearance: none; }
+textarea {  -webkit-appearance: none;}
+
+/*按钮*/
+.button{ width:92.6%; margin:0 auto; display:block; height:2.8rem; background:#ed6c03; color:#fff; border:none; font-size:1.2rem; border-radius:0.5rem; font-family:"微软雅黑";}
+.button1{ width:92.6%; margin:0 auto; display:block; height:2.8rem; background:#949494; color:#fff; border:none; font-size:1.2rem; border-radius:0.5rem; font-family:"微软雅黑";}
+
+/*身份验证*/
+.identity { padding-top:1rem;}
+.identity_icon{ width:6rem; height:6rem; overflow:hidden; display:block; border:0.2rem solid #e3e3e3; border-radius:50%; margin:0 auto; }
+.identity_icon img{ width:100%;}
+.identity_title{ text-align:center; font-size:1rem; color:#6a6a6a; font-weight:normal; margin:2% 0 3%;}
+.identity_content{ width:100%; margin-bottom:2%;}
+.verify{ width:100%; height:3.3rem; font-size:1rem;font-family:"微软雅黑"; padding:0 3rem; border:0.1rem solid #b8b8b8; border-right:none; border-left:none;}
+.verify_name{ background:url(../img/identity.png) no-repeat 1.2rem 0.75rem/1.5rem #fff;}
+.verify_tele{ background:url(../img/identity.png) no-repeat 1.1rem -3rem/1.5rem #fff;}
+.prompt{ color:#ff4a00; font-size:0.75rem; padding:0 3rem; line-height:2rem;}
+
+/*签到*/
+.sign{ position: relative; height: 100%;}
+.sign_title{ text-align:center; background:#fff; height:3rem; line-height:3rem; border-bottom:0.1rem solid #7b7b7b; font-weight:normal; font-size:0.8rem; color:#333; position: relative; z-index: 1;}
+.sign_prompt{ text-align:center; line-height:3rem; color:#999; font-size:0.85rem; position: relative; z-index: 1;}
+.sign button{ position:absolute; z-index: 1; margin: 0 auto; left: 0; right: 0; bottom:5rem;}
+.sign_map{ width:100%; height: 100%; position: absolute; top: 0;}
+
+/*抢任务*/
+.grab_head{ background:url(../img/grad.jpg) no-repeat center center/100% 100%; padding:1rem 0; overflow:hidden;}
+.grab_icon{ overflow:hidden; width:4rem; height:4rem; border:0.2rem solid #e3e3e3; border-radius:50%; margin:0 1rem 0 0.8rem; float:left;}
+.grab_icon img{ width:100%;}
+.grab_name{ float:left; font-size:1rem; color:#333; margin-top:1rem;}
+.grab_name span{ font-size:0.8rem; margin-top:0.1rem; display:block;}
+.grab_task{ padding:0.6rem 0 0;}
+.grab_task1{ background:#fff; overflow:hidden; margin-bottom:1rem;}
+.grab_task1 h2{ background:url(../img/1.png) no-repeat 0.75rem center/1rem; height:2.5rem; line-height:2.5rem; border-bottom:1px solid #e9e9e9; font-weight:normal; color:#333; font-size:1rem; padding-left:2.4rem;}
+.grab_task1 h2 a{ float:right; font-size:0.85rem; color:#ed6c03; margin-right:0.75rem;}
+.grab_task_text{ border-bottom:0.1rem solid #cfcfcf; overflow:hidden; padding:6px 0;}
+.grab_task_text p{ line-height:2rem; font-size:0.85rem; color:#515151; margin:0 3%; overflow:hidden; font-size: 0.9rem;}
+.grab_task_text p span{ float:left; color:#7f7f7f; display:block;}
+.grab_task_text p b{ display:block; float:left; width:85%; font-weight:normal;}
+.grab_task_text p b.b_name{ width:auto; margin-right:0.75rem;}
+.grab_task_text p a{ display:block; float:left; border:0.1rem solid #ed6c03; border-radius:0.5rem; height:1.6rem; line-height:1.6rem; color:#ed6c03; font-size:0.75rem; background:url(../img/5.png) no-repeat 0.5rem center/0.75rem; width:auto; padding:0 0.5rem 0 1.5rem;}
+.grab_task_time{ width:16rem; margin:0 auto; color:#ed6c03; line-height:3rem; font-size:0.85rem; background:url(../img/time.png) no-repeat left center/1rem; padding-left:1.5rem;}
+.grab_button{ display:block; margin:0 auto 1rem; width:18rem; height:2.5rem; line-height:2.5rem; background:#ed6c03; text-align:center; color:#fff; font-size:1.2rem; border-radius:0.5rem;}
+.grab_button1{ display:block; margin:0 auto 1.2rem; width:18rem; height:2.5rem; line-height:2.5rem; background:#999; text-align:center; color:#fff; font-size:1.2rem; border-radius:0.5rem;}
+
+/*任务详情*/
+.task_details_text .task_title{ margin-top:1rem; height:0.75rem; line-height:0.75rem; font-size:1rem; font-weight:normal; color:#7a7a7a; padding:0 1.6rem; background:url(../img/2.png) no-repeat 0.75rem center/0.3rem 0.6rem; margin-bottom:0.5rem;}
+.task_details_text p{ background:#fff; font-size:0.9rem; line-height:2rem; padding:0.3rem 0.75rem}
+.task_details_text p span{ display:block;}
+.task_details_text table{ background:#fff; font-size:0.9rem; }
+.task_details_text table th{ text-align:left; font-weight:normal;  padding:0.8rem 0 0.5rem 1.6rem; border-bottom:0.1rem solid #cfcfcf}
+.task_details_text table td{ height:2.4rem; border-bottom:0.1rem solid #cfcfcf; padding:0 0.75rem;}
+.task_details_text table td.task_details_texttd{ text-align:center; border-right:0.1rem solid #cfcfcf; color:#7b7b7b; padding:0;}
+.task_details_text ul{ width: 100%; overflow: hidden;}
+.task_details_text ul li{ width: 32.1%; height:12rem; overflow: hidden; margin: 0 0.6% 1.2%; float: left;}
+.task_details_text ul li img{ width: 100%; height: 100%;}
+.task_details_img{position:fixed; width: 100%; height: 100%; top: 0; left: 0; background:rgba(0,0,0,10); z-index: 10; display: none;}
+.task_details_imgcenter{max-width: 100%; max-height:100%; overflow: hidden; margin: 0 auto;}
+
+/*申请完工*/
+.complete_title{ line-height:3rem; padding:0 0.75rem; font-weight:normal; font-size:0.9rem; color:#333;}
+.complete_title span{ color:#ed6c03; font-size:1.2rem;}
+.complete ul{ margin:0 0.75rem 1.3rem; overflow:hidden;}
+.complete ul li{ border:1px solid #fff; float:left; width:30%; height:9rem; margin:1.33%; overflow:hidden;}
+.complete ul li img{width:100%;height:100%;}
+
+/*未完工任务*/
+.not_task .nosign_button{ width:41.8%; float:left; margin:0.85rem 4%; text-align:center; display:block; height:2.8rem; line-height:2.8rem; background:#ed6c03; color:#fff;  font-size:1.2rem; border-radius:0.5rem; }
+.not_task .signed_button{ width:41.8%; float:left; margin:0.85rem 4%; text-align:center; display:block; height:2.8rem; line-height:2.8rem; background:#999; color:#fff; font-size:1.2rem; border-radius:0.5rem;}
+.not_task_tel { width:10.4rem; height:2.2rem; line-height:2.2rem; display:block; margin:2rem auto; border:1px solid #ed6c03; color:#ed6c03; font-size:0.9rem; border-radius:0.5rem; background:url(../img/5.png) no-repeat 1.5rem center/0.75rem; padding-left:3rem; background-size:0.85rem;}
+/*完工任务*/
+.ok_task_state{ font-size:0.85rem; line-height:2.4rem; margin:0 0.75rem; color:#7a7a7a;}
+.ok_task_state span.no_state{ color:#ed6c03;}
+.ok_task_state span.ok_state{ color:#59c27c;}
+.ok_task_state a{float: right; color: #ed6c03;}
+/*确认分配金额*/
+.reb_branch_list{ background: #fff; padding: 1.25rem 3.8% 0; color: #515151; font-size: 0.9rem; border-bottom: 1px solid #e9e9e9; margin-bottom:1.25rem;}
+.reb_branch_list p{line-height:2rem;}
+.reb_branch_list span{ color: #7f7f7f;}
+.reb_branch_list strong{font-weight: normal; color: #ed6e00; border-top: 1px solid #e9e9e9; display: block; margin: 1.25rem 0 0 0; height: 3.5rem; line-height: 3.5rem;}
+.rmb_branch table{ width: 92.5%; margin: 0 auto; font-size: 0.9rem; border:1px solid #e8e8e8; border-bottom:none;}
+.rmb_branch table tr th{ background:#e8e8e8; height:2.2rem; color: #515151; font-size: 1rem; font-weight:normal;border-right: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;}
+.rmb_branch table tr td{ background: #fff; text-align: center; color: #515151; height: 2.1rem; border-right: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;}
+.rmb_branch .rmb_branchOK{ display: block; width: 92.2%; margin: 1.2rem auto; border: 1px solid #ed6e00; text-align:center; color: #ed6e00; font-size: 1.2rem; line-height: 2.5rem;}
